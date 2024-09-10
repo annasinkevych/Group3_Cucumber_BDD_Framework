@@ -1,7 +1,7 @@
 @smoke
 Feature: Docuport New Client Creation Feature Login as an Advisor
 
-  #UI SCENARIO - Anna - I have started this a while ago but haven't finished it
+  #UI SCENARIO - Assignee: Anna - I have started this a while ago but haven't finished it
   @docuportCreateNewClient
   Scenario Outline: Create a new "Personal" client and login as a new client
 
@@ -21,12 +21,12 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
       | Bruce      | Willis    | bruce@lead.com       | 6789341212   | Bruce1267       |
 
 
-  #DB SCENARIO
+  #DB SCENARIO - Assignee: Andrew - refer to the examples table above for the clients
   @docuportDatabaseClientVerification
-  Scenario: Login as and advisor to Docuport and verify the client was created
+  Scenario: Verify the client was created in the DOCUPORT database
 
 
 
-  #UI SCENARIO
+  #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
   @docuportClientSearchFunctionality
   Scenario: Verify Client Search functionality, login as an advisor
