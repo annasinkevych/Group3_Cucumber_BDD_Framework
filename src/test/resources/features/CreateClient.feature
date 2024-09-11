@@ -31,3 +31,20 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
   #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
   @docuportClientSearchFunctionality
   Scenario: Verify Client Search functionality, login as an advisor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      #API & DB Scenario - Assignee: Sammy
+  @docuportPostNewClientToAPIVerifyDatabase
+  Scenario: POST to Docuport Client API and verify the client was created in the database
