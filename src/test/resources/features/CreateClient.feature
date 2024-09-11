@@ -1,7 +1,7 @@
 Feature: Docuport New Client Creation Feature Login as an Advisor
 
   #UI SCENARIO - Assignee: Anna - I have started this a while ago but haven't finished it
-  @docuportCreateNewClientAnna
+  @docuportCreateNewClientAnna @smoke
   Scenario Outline: Create a new "Personal" client and login as a new client
 
     Given the user is logged in as an advisor
