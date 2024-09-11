@@ -38,7 +38,7 @@ pipeline {
 
         stage('Clone code') {
             steps{
-                git 'https://github.com/feyruz-loopcamp/demo-project.git'
+                git 'https://github.com/annasinkevych/Group3_Cucumber_BDD_Framework.git'
             }
         }
 
