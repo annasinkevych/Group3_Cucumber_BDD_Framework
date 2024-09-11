@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
+    }
+
+    stages {
+
+        stage('Clone code') {
+            steps{
+                git 'https://github.com/feyruz-loopcamp/demo-project.git'
+            }
+        }
+
+        stage('Run Tests SMOKE') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh "mvn clean test -Dcucumber.filter.tags=\"@smoke\" "
+                    } else {
+                        bat "mvn clean test -Dcucumber.filter.tags=\"@smoke\" "
+                    }
+                }
+            }
+        }
+
+        stage('Run Tests REGRESSION') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh "mvn clean test -Dcucumber.filter.tags=\"@regression\" "
+                    } else {
+                        bat "mvn clean test -Dcucumber.filter.tags=\"@regression\" "
+                    }
+                }
+            }
+        }
+
+
+        stage('Generate report'){
+            steps{
+                cucumber failedFeaturesNumber: -1,
+                failedScenariosNumber: -1,
+                failedStepsNumber: -1,
+                fileIncludePattern: '**/*.json',
+                pendingStepsNumber: -1,
+                skippedStepsNumber: -1,
+                sortingMethod: 'ALPHABETICAL',
+                undefinedStepsNumber: -1
+            }
+
+        }
+    }
+}
