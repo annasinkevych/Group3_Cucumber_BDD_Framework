@@ -13,6 +13,3 @@ Feature: Edit existing user in Docuport login as advisor
   Scenario: Login as and advisor to Docuport and verify the rows per page match the user count in database
 
 
-  #API & DB Scenario - Assignee: Sammy
-  @docuportPostNewClientToAPIVerifyDatabase
-  Scenario: POST to Docuport Client API and verify the client was created in the database
