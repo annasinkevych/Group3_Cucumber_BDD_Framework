@@ -40,24 +40,24 @@ public class Driver {
             switch (browserType.toLowerCase()){
                 case "chrome":
                     driverPool.set(new ChromeDriver());
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
+                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
                 case "firefox":
                     driverPool.set(new FirefoxDriver());
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
+                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
                 case "safari":
                     driverPool.set(new SafariDriver());
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
+                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
                     break;
                 case "headless": //it will still run but will not open Chrome
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless");
                     driverPool.set(new ChromeDriver(options));
-                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
+                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
             }
-//            driverPool.get().manage().window().maximize();
-//            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driverPool.get().manage().window().maximize();
+            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
         }
         return driverPool.get();
     }
@@ -66,11 +66,11 @@ public class Driver {
      * closing driver
      * @author anna
      */
-    public static void closeDriver(){
-        if(driverPool.get() !=null){
-            driverPool.get().quit();
-            //driver = null;
-            driverPool.remove();
-        }
-    }
+//    public static void closeDriver(){
+//        if(driverPool.get() !=null){
+//            driverPool.get().quit();
+//            //driver = null;
+//            driverPool.remove();
+//        }
+//    }
 }

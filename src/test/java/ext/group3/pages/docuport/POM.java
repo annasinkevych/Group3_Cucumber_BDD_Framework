@@ -4,6 +4,8 @@ public class POM {
 
     private DocuClientPage docuClientPage;
     private DocuLoginPage docuLoginPage;
+    private DocuportBasePage docuportBasePage;
+    private DocuEditClientPage docuEditClientPage;
 
     public DocuClientPage getDocuClientPage() {
         if(docuClientPage == null) {
@@ -19,4 +21,18 @@ public class POM {
         return docuLoginPage;
     }
 
+    public DocuportBasePage getDocuportBasePage() {
+        if(docuportBasePage == null) {
+            docuportBasePage = new DocuportBasePage();
+        }
+        return docuportBasePage;
+    }
+
+    public DocuEditClientPage getDocuEditClientPage() {
+        if(docuEditClientPage == null)
+        {
+            docuEditClientPage = new DocuEditClientPage();
+        }
+        return docuEditClientPage;
+    }
 }
