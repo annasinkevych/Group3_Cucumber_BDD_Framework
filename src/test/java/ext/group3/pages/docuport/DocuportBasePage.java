@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
@@ -67,6 +68,10 @@ public class DocuportBasePage {
         }
 
     }
+
+    @FindBy(xpath = "//span[contains(text(), 'Batch1 Group3')]")
+    public WebElement Batch1Group3Button;
+
 
     public DocuportBasePage(){
         PageFactory.initElements(Driver.getDriver(),this);

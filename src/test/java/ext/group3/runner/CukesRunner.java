@@ -35,8 +35,8 @@ import org.junit.runner.RunWith;
                    "junit:target/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
         features = "src/test/resources/features", //goes to this folder where file is stored
-        glue = "io/loop/step_definitions", //helps connect my feature file and step defs java code
-        dryRun = true,  //gets code snippet for this scenario with the below tag when true
+        glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
+        dryRun = false,  //gets code snippet for this scenario with the below tag when true
         tags = "@docuportLoginForALlUsers",
         monochrome = false,//reduces unnecessary locks
         publish = false //creates online cucumber reports that can be opened in the browser
