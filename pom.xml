@@ -127,12 +127,6 @@
             <version>4.24.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
 
         <!-- FOR Maven projects that use Cucumber for behavior-driven development-->
         <!-- Provides the core Cucumber functionality and supports writing step definitions in Java-->
