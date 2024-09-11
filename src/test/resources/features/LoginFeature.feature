@@ -15,9 +15,11 @@ Feature: Docuport Login Logout and Negative Testing Feature
       | b1g3_employee@gmail.com   | Group3   |
 
 
-
-
-
-  #UI SCENARIO -  Assignee: Igor
+  #UI SCENARIO -  Assignee: Igor - Done
   @docuportLogoutFunctionality
   Scenario: Verify that the users can logout successfully
+    When user enters credentials as "b1g3_advisor@gmail.com" "Group3"
+    Then user should see the "Batch1 Group3" displayed
+    When user clicks on the usericon button
+    And user clicks on the logout button
+    Then user should be successfully logged out and should see the login page displayed
