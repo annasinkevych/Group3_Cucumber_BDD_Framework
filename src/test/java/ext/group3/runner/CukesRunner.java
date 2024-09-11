@@ -35,9 +35,9 @@ import org.junit.runner.RunWith;
                    "junit:target/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
         features = "src/test/resources/features", //goes to this folder where file is stored
-        glue = "io/loop/step_definitions", //helps connect my feature file and step defs java code
-        dryRun = true,  //gets code snippet for this scenario with the below tag when true
-        tags = "@docuportLoginForALlUsers",
+        glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
+        dryRun = false,  //gets code snippet for this scenario with the below tag when true
+        tags = "@docuportAPIUploadDocumentVerification",
         monochrome = false,//reduces unnecessary locks
         publish = false //creates online cucumber reports that can be opened in the browser
 
@@ -46,7 +46,6 @@ import org.junit.runner.RunWith;
 public class CukesRunner {
 
 }
-
 
 /*
     In my framework i use cucumber java and cucumber junit dependencies and runner class from junit with cucumber options that links,  With the helps of runner class I show where my feature file and my step defs code is. The gliue helps connect. Cucumber junit has annotations.
