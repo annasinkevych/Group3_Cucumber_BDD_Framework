@@ -60,4 +60,20 @@ public class DocuportLoginForALlUsersStepDefs {
         LOG.info("Expected button: " + basePage.Batch1Group3Button.getText());
     }
 
+    @When("user clicks on the usericon button")
+    public void user_clicks_on_the_usericon_button() {
+        loginPage.userIcon.click();
+    }
+
+    @When("user clicks on the logout button")
+    public void user_clicks_on_the_logout_button() {
+        loginPage.logoutButton.click();
+    }
+
+    @Then("user should be successfully logged out and should see the login page displayed")
+    public void user_should_be_successfully_logged_out_and_should_see_the_login_page_displayed() {
+        loginPage.loginTextElement.isDisplayed();
+    }
+
 }
+
