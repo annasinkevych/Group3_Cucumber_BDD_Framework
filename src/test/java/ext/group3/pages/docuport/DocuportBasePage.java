@@ -26,6 +26,19 @@ public class DocuportBasePage extends DocuLoginPage {
             return "no such button";
         }
     }
+
+    public String getElementTextTagAndName(String tag,String text){
+        /**
+         * We are handling the case if the element was not found in that case it will return text = null
+         */
+        try {
+            String xpath = "//" + tag + "[normalize-space()='" + text + "']";
+            return Driver.getDriver().findElement(By.xpath(xpath)).getText();
+        } catch (Exception e){
+            return "no such button";
+        }
+    }
+
     public WebElement getElement(String name){
 
         String xpath = "//*[normalize-space()='"+ name + "']";

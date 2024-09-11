@@ -1,7 +1,1 @@
-10.09.2024 19:50:56 INFO  Hooks:22 - ...........START AUTOMATION...........LOOP ACADEMY
-10.09.2024 19:50:57 INFO  DocuportLoginForALlUsersStepDefs:60 - Expected button: Batch1 Group3
-10.09.2024 19:50:57 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
-
-10.09.2024 21:37:36 ERROR DocuLoginPage:50 - No submit button displayed
-10.09.2024 21:37:36 INFO  Docuport_Create_New_Client_SC_1_Step_Defs:82 - Expected button: Robert De Niro.
-10.09.2024 21:37:36 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
+11.09.2024 01:13:49 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
