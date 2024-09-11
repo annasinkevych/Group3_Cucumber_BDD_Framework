@@ -15,7 +15,8 @@ public class DocuClientPage extends DocuportBasePage {
 
     private static final Logger LOG = LogManager.getLogger();
 
-
+    @FindBy(xpath = "//h3[.='Choose account']")
+    public WebElement chooseAccountText;
 
     public WebElement getSuccessMessagePopUp(String fullname) {
         WebElement element;
