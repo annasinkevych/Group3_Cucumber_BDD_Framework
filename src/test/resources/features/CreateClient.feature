@@ -22,9 +22,9 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
 
 
   #DB SCENARIO
+
   @docuportDatabaseClientVerification
   Scenario: Login as and advisor to Docuport and verify the client was created
-
 
 
   #UI SCENARIO

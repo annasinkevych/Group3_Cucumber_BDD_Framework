@@ -22,7 +22,7 @@ public class Hooks {
         LOG.info("...........START AUTOMATION...........LOOP ACADEMY");
     }
 
-    @After
+//    @After
     public void tearDown(Scenario scenario) {
         // only takes a screenshot when scenario is failed
         if (scenario.isFailed()) {
