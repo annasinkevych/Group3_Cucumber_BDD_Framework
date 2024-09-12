@@ -41,21 +41,21 @@
             </plugin>
 
             <!-- Parallel testing is with help of maven surefire-plugin-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.1</version>
-                <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <includes>
-                        <include>**/CukesRunner*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.3.1</version>-->
+<!--                <configuration>-->
+<!--                    <parallel>methods</parallel>-->
+<!--                    <threadCount>2</threadCount>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <useUnlimitedThreads>false</useUnlimitedThreads>-->
+<!--                    <perCoreThreadCount>false</perCoreThreadCount>-->
+<!--                    <includes>-->
+<!--                        <include>**/CukesRunner*.java</include>-->
+<!--                    </includes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
         </plugins>
     </build>
