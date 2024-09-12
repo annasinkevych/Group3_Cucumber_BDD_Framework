@@ -36,7 +36,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features", //goes to this folder where file is stored
         glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
         dryRun = false,  //gets code snippet for this scenario with the below tag when true
-        tags = "@docuportLoginForALlUsers",
+        tags = "@smoke",
         monochrome = false,//reduces unnecessary locks
         publish = true //creates online cucumber reports that can be opened in the browser
 
