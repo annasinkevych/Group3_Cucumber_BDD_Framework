@@ -16,7 +16,7 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
     Then the user name "<First Name>" and "<Last Name>" should be displayed in the top right
     Examples:
       | First Name | Last Name | Client Email  | Phone Number | Client Password |
-      | Pizza  | Mas       | pizza@gmail.com | 3453457898   | Password1       |
+      | MiMi  | Mas       | mimi@gmail.com | 3453457898   | Password1       |
 
 
 
