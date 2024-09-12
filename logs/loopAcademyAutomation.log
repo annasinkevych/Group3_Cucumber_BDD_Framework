@@ -1,3 +1,36 @@
-12.09.2024 11:38:20 ERROR DocuLoginPage:50 - No submit button displayed
-12.09.2024 11:38:20 INFO  Docuport_Create_New_Client_Step_Defs:87 - Expected button: MiMi Mas.
-12.09.2024 11:38:20 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
+12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:27 - 
+
+-----DATABASE CONNECTION ESTABLISHED-----
+
+
+12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:66 - 
+
+**************************
+Client details successfully matched: 
+First Name: MiMi, Last Name: Mas, Email: mimi@gmail.com, Phone Number: 3453457898
+
+**************************
+
+
+12.09.2024 17:12:16 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
+12.09.2024 17:12:16 INFO  Hooks:22 - ...........START AUTOMATION...........LOOP ACADEMY
+12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:24 - 
+
+-----CONNECTING TO THE DATABASE-----
+
+
+12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:27 - 
+
+-----DATABASE CONNECTION ESTABLISHED-----
+
+
+12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:68 - 
+
+**************************
+Client details successfully matched: 
+First Name: Adriano, Last Name: Celentano, Email: celentano@gmail.com
+
+**************************
+
+
+12.09.2024 17:12:16 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
