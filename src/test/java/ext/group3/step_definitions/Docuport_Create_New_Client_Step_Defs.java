@@ -1,6 +1,7 @@
 package ext.group3.step_definitions;
 
 import ext.group3.pages.docuport.POM;
+import ext.group3.utilities.Utilities_API.Environment;
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.DocuportConstants;
@@ -22,7 +23,7 @@ public class Docuport_Create_New_Client_Step_Defs {
     @Given("the user is logged in as an advisor")
     public void the_user_is_logged_in_as_an_advisor() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperties("docuport"));
+        Driver.getDriver().get(Environment.URL);
         pages.getDocuLoginPage().userLogin(DocuportConstants.USERNAME_ADVISOR, DocuportConstants.PASSWORD);
     }
     @When("the user creates a new client with the following details:")
