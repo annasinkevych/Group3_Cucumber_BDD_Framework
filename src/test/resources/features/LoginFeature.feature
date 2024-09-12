@@ -15,7 +15,7 @@ Feature: Docuport Login Logout and Negative Testing Feature
       | b1g3_employee@gmail.com   | Group3   |
 
 
-  #UI SCENARIO -  Assignee: Igor - Done
+  #UI SCENARIO -  Assignee: Igor
   @docuportLogoutFunctionality
   Scenario: Verify that the users can logout successfully
     When user enters credentials as "b1g3_advisor@gmail.com" "Group3"
