@@ -1,4 +1,3 @@
-@regression
 Feature: Upload document to Docuport application DB,API verification
 
   #UI SCENARIO - Assignee:  Sergio
