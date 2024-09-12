@@ -1,4 +1,3 @@
-@regression
 Feature: Edit existing user in Docuport login as advisor
 
   #UI SCENARIO -  Assignee: Oleksandr M
