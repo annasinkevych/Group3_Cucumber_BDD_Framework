@@ -30,9 +30,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty",
                 "html:target/html-reports/cucumber-report.html",
-                  "json:target/json-reports/json-report.json",
-                  "rerun:target/rerun.txt", //this plugin is needed to rerun only the failed scenarios, will create a target folder with rerun
-                   "junit:target/cucumber.xml",
+                "json:target/json-reports/json-report.json",
+                "rerun:target/rerun.txt", //this plugin is needed to rerun only the failed scenarios, will create a target folder with rerun
+                "junit:target/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
         features = "src/test/resources/features", //goes to this folder where file is stored
         glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
