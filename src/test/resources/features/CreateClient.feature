@@ -17,8 +17,7 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
     Examples:
       | First Name | Last Name | Client Email           | Phone Number | Client Password |
       | Danny      | DeVito    | danny@gmail.com        | 3453457898   | Password1       |
-      | Stefano    | Mozarella | mozzarello@example.com | 3453907898   | Password1       |
-      | Al         | Pacino    | pacino@gmail.com       | 6753907898   | Password1       |
+
 
 
 

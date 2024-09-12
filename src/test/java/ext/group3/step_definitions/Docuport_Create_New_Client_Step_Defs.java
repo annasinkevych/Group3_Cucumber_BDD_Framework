@@ -30,8 +30,12 @@ public class Docuport_Create_New_Client_Step_Defs {
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Clients");
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Create new client");
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Personal");
+
+
+
         // Convert the DataTable to a Map
         Map<String, String> clientDetails = dataTable.asMaps(String.class, String.class).get(0);
+        BrowserUtils.justWait(3000);
         pages.getDocuEditClientPage().buttonClick("Create new user");
         for (Map.Entry<String, String> entry : clientDetails.entrySet()) {
             pages.getDocuEditClientPage().sendKeysToTxtField(entry.getKey(), entry.getValue());
@@ -39,6 +43,7 @@ public class Docuport_Create_New_Client_Step_Defs {
 
         pages.getDocuEditClientPage().sendKeysToDropDownContainer("Advisor", "Batch1 Group3");
 
+        BrowserUtils.justWait(3000);
         BrowserUtils.clickWithJS(pages.getDocuEditClientPage().submitButton);
         BrowserUtils.justWait(3000);
 

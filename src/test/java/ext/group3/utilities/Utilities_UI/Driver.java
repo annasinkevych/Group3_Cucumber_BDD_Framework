@@ -66,11 +66,11 @@ public class Driver {
      * closing driver
      * @author anna
      */
-//    public static void closeDriver(){
-//        if(driverPool.get() !=null){
-//            driverPool.get().quit();
-//            //driver = null;
-//            driverPool.remove();
-//        }
-//    }
+    public static void closeDriver(){
+        if(driverPool.get() !=null){
+            driverPool.get().quit();
+            //driver = null;
+            driverPool.remove();
+        }
+    }
 }
