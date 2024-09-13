@@ -351,4 +351,56 @@ public class DB_Utility {
         return allRowLstOfMap;
 
     }
+
+
+    /**
+     *
+     * @param query
+     * @return returns query result in a list of maps where the list represents
+     *         collection of rows and a map represents represent a single row with
+     *         key being the column name
+     */
+    public static List<Map<String, Object>> getQueryResultMap(String query) {
+        executeQuery(query);
+        List<Map<String, Object>> rowList = new ArrayList<>();
+        ResultSetMetaData rsmd;
+
+        try {
+            rsmd = rs.getMetaData();
+
+            while (rs.next()) {
+
+                Map<String, Object> colNameValueMap = new HashMap<>();
+
+                for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+
+                    colNameValueMap.put(rsmd.getColumnName(i), rs.getObject(i));
+                }
+
+                rowList.add(colNameValueMap);
+
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return rowList;
+
+    }
+
+    public static void executeQuery(String query) {
+        try {
+            stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            rs = stm.executeQuery(query);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
