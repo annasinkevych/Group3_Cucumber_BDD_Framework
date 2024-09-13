@@ -38,7 +38,7 @@ import org.junit.runner.RunWith;
         dryRun = false,  //gets code snippet for this scenario with the below tag when true
         tags = "",
         monochrome = false,//reduces unnecessary locks
-        publish = true //creates online cucumber reports that can be opened in the browser
+        publish = false //creates online cucumber reports that can be opened in the browser
 
 )
 
