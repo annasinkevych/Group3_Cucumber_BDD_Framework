@@ -3,6 +3,7 @@ package ext.group3.step_definitions;
 import ext.group3.pages.docuport.DocuLeadsPage;
 import ext.group3.pages.docuport.DocuLoginPage;
 import ext.group3.pages.docuport.DocuportBasePage;
+import ext.group3.utilities.Utilities_API.Environment;
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.Driver;
 import io.cucumber.java.en.Given;
@@ -21,7 +22,7 @@ public class LeadsDetails {
 
     @Given("user is on Docuport login page")
     public void user_is_on_docuport_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperties("docuport"));
+        Driver.getDriver().get(Environment.URL);
     }
     @When("user enters credentials")
     public void user_enters_credentials(Map <String, String> credentials) {

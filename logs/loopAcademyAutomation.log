@@ -1,36 +1,3 @@
-12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:27 - 
+12.09.2024 14:57:50 INFO  DocuportLoginForALlUsersStepDefs:63 - Expected button: Batch1 Group3
+12.09.2024 14:57:50 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
 
------DATABASE CONNECTION ESTABLISHED-----
-
-
-12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:66 - 
-
-**************************
-Client details successfully matched: 
-First Name: MiMi, Last Name: Mas, Email: mimi@gmail.com, Phone Number: 3453457898
-
-**************************
-
-
-12.09.2024 17:12:16 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY
-12.09.2024 17:12:16 INFO  Hooks:22 - ...........START AUTOMATION...........LOOP ACADEMY
-12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:24 - 
-
------CONNECTING TO THE DATABASE-----
-
-
-12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:27 - 
-
------DATABASE CONNECTION ESTABLISHED-----
-
-
-12.09.2024 17:12:16 INFO  DocuportDatabaseClientVerificationStepDefs:68 - 
-
-**************************
-Client details successfully matched: 
-First Name: Adriano, Last Name: Celentano, Email: celentano@gmail.com
-
-**************************
-
-
-12.09.2024 17:12:16 INFO  Hooks:32 - ...........END AUTOMATION...........LOOP ACADEMY

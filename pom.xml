@@ -10,53 +10,27 @@
 
     <properties>
         <!-- Specifying properties related to the Java compiler and source encoding.-->
-        <maven.compiler.source>21</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
         <!-- This plugin is essential for cucumber -html - reports that are similar to the Cucumber reports in Jenkins-->
         <plugins>
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.7.8</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>Cucumber HTML Reports</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <param>**/json-report*.json</param>
-                            </jsonFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
-            <!-- Parallel testing is with help of maven surefire-plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.0.0-M5</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
+                    <!--                    <parallel>methods</parallel>-->
+                    <!--                    <threadCount>2</threadCount>-->
                     <testFailureIgnore>true</testFailureIgnore>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <perCoreThreadCount>false</perCoreThreadCount>
                     <includes>
-                        <include>**/CukesRunner*.java</include>
+                        <include>**/*Runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
@@ -104,13 +78,6 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>1.14.0</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>com.aventstack</groupId>-->
-<!--            <artifactId>extentreports</artifactId>-->
-<!--            <version>5.1.1</version>-->
-<!--        </dependency>-->
-
 
         <!--For web browser automation -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
