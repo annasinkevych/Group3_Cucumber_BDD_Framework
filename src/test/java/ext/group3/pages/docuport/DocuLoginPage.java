@@ -17,6 +17,9 @@ public class DocuLoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "//h1[.=' Login ']")
+    public WebElement loginTextElement;
+
     @FindBy(xpath = "//label[.='Username or email']/following-sibling::input")
     public WebElement usernameField;
 
@@ -28,6 +31,7 @@ public class DocuLoginPage {
 
     @FindBy(xpath = "//button[@type='submit']//span")
     public WebElement submitButton;
+
 
     public void userLogin(String username, String password) {
         //explicit wait

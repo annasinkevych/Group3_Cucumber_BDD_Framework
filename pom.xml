@@ -4,64 +4,37 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.loop.test</groupId>
-    <artifactId>cucumber-project-b3</artifactId>
+    <groupId>ext.group3</groupId>
+    <artifactId>Group3_Cucumber_BDD_Framework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <!-- Specifying properties related to the Java compiler and source encoding.-->
-        <maven.compiler.source>21</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
         <!-- This plugin is essential for cucumber -html - reports that are similar to the Cucumber reports in Jenkins-->
         <plugins>
-            <plugin>
-                <groupId>net.masterthought</groupId>
-                <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.7.8</version>
-                <executions>
-                    <execution>
-                        <id>execution</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <projectName>Cucumber HTML Reports</projectName>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <inputDirectory>${project.build.directory}</inputDirectory>
-                            <jsonFiles>
-                                <param>**/json-report*.json</param>
-                            </jsonFiles>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
-            <!-- Parallel testing is with help of maven surefire-plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>3.0.0-M5</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>2</threadCount>
+                    <!--                    <parallel>methods</parallel>-->
+                    <!--                    <threadCount>2</threadCount>-->
                     <testFailureIgnore>true</testFailureIgnore>
-                    <useUnlimitedThreads>false</useUnlimitedThreads>
-                    <perCoreThreadCount>false</perCoreThreadCount>
                     <includes>
-                        <include>**/CukesRunner*.java</include>
+                        <include>**/*Runner.java</include>
                     </includes>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
     <dependencies>
-
 
         <dependency>
             <groupId>org.assertj</groupId>
@@ -106,13 +79,6 @@
             <version>1.14.0</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.aventstack</groupId>-->
-<!--            <artifactId>extentreports</artifactId>-->
-<!--            <version>5.1.1</version>-->
-<!--        </dependency>-->
-
-
         <!--For web browser automation -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -121,12 +87,7 @@
             <version>4.23.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
-        <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+
 
         <!-- FOR Maven projects that use Cucumber for behavior-driven development-->
         <!-- Provides the core Cucumber functionality and supports writing step definitions in Java-->
@@ -180,6 +141,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- For De-serializaition and serialization when working with api-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

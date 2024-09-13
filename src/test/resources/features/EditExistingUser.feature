@@ -1,6 +1,4 @@
-@regression
 Feature: Edit existing user in Docuport login as advisor
-
   Background:
     Given go to Docuport beta page
   #UI SCENARIO
@@ -23,6 +21,8 @@ Feature: Edit existing user in Docuport login as advisor
 
 
 
-  #UI & DB SCENARIO
+  #UI & DB SCENARIO - Assignee: Alex S
   @docuportRowsPerPageValidation
   Scenario: Login as and advisor to Docuport and verify the rows per page match the user count in database
+
+
