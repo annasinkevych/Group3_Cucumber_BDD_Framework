@@ -10,8 +10,8 @@
 
     <properties>
         <!-- Specifying properties related to the Java compiler and source encoding.-->
-        <maven.compiler.source>21</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source> <!--This sets the source compatibility to Java 21, which means the Java source code will be compiled with the syntax and features of Java 21.-->
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 <!--    <build>-->
