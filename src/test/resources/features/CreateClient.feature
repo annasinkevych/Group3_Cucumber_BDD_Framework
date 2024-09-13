@@ -22,8 +22,16 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
 
   
   #DB SCENARIO - Assignee: Andrew - refer to the examples table above for the clients
-#  @docuportDatabaseClientVerification
-  Scenario: Verify the client was created in the DOCUPORT database
+  @docuportDatabaseClientVerification @smoke
+  Scenario Outline: Verify the client was created in the DOCUPORT database
+    Given a connection to the database is established using JDBC
+    Then the client details in the database should match: "<First Name>", "<Last Name>", "<Client Email>", "<Phone Number>"
+
+    Examples:
+      | First Name | Last Name | Client Email        | Phone Number |
+      | MiMi       | Mas       | mimi@gmail.com      | 3453457898   |
+      | Adriano    | Celentano | celentano@gmail.com |              |
+
 
 
 
