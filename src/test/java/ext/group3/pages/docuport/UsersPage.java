@@ -1,13 +1,14 @@
 package ext.group3.pages.docuport;
 
 import ext.group3.utilities.Utilities_UI.Driver;
-import org.openqa.selenium.WebDriver;
+import freemarker.core.CFormat;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.xml.xpath.XPath;
-import java.security.cert.X509Certificate;
+import java.util.List;
+
+import static java.lang.Integer.valueOf;
 
 public class UsersPage extends DocuportBasePage{
 
@@ -15,11 +16,24 @@ public class UsersPage extends DocuportBasePage{
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    public  WebElement allRadiobutton;
+
+
     @FindBy(xpath = "//span[.='Users']")
     public WebElement usersButton;
 
     @FindBy(xpath = "(//span[.='Search'])[1]")
     public WebElement searchButton;
+
+    @FindBy(xpath = "//div[@role='radiogroup']")
+    public List <WebElement> radioButtonsList;
+
+        public WebElement getRadioButtonAll() {
+            for (WebElement element : radioButtonsList) {
+                allRadiobutton = element;
+            }
+        return allRadiobutton;
+    }
 
     @FindBy(xpath = "//span[.=' Search ']")
     public WebElement searchButton2;
@@ -56,6 +70,17 @@ public class UsersPage extends DocuportBasePage{
 
     @FindBy(xpath = "(//td[@class='text-start'])[7]")
     public WebElement resultAdvisor;
+
+    @FindBy(xpath = "//div[@class='v-data-footer__pagination']")
+    public WebElement paginationData;
+
+
+    public int getAllUserAmount(){
+        String test = paginationData.getText().trim();
+        int userAmount = Integer.parseInt(test.substring(test.indexOf("f")+2));
+        return userAmount;
+    }
+
 
 
 }
