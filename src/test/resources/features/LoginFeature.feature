@@ -1,4 +1,3 @@
-@smoke
 Feature: Docuport Login Logout and Negative Testing Feature
 
    #UI SCENARIO - Assignee: ELINA & Luidmyla - you can implement it this way or create your own way

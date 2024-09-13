@@ -22,7 +22,7 @@ public class Hooks {
         LOG.info("...........START AUTOMATION...........LOOP ACADEMY");
     }
 
-    @After
+//    @After
     public void tearDown(Scenario scenario) {
         // only takes a screenshot when scenario is failed
         if (scenario.isFailed()) {
@@ -30,7 +30,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
         LOG.info("...........END AUTOMATION...........LOOP ACADEMY");
-        //Driver.closeDriver();
+        Driver.closeDriver();
     }
 
     //@AfterStep

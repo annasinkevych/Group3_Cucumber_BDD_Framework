@@ -1,6 +1,10 @@
 package ext.group3.utilities.Utilities_UI;
 
+import com.github.javafaker.Faker;
+
 public class DocuportConstants {
+    static Faker faker = new Faker();
+
 
     public static final String PASSWORD_CLIENT = "Group3";
     public static final String ERROR_MESSAGE_FOR_EMPTY_PASSWORD = "Please enter your password";
@@ -34,4 +38,8 @@ public class DocuportConstants {
     public static final int medium = 7;
     public static final int large = 10;
     public static final int extraLarge = 20;
+
+    public static final String ChangedFirstName = faker.name().firstName();
+    public static final String ChangedLastName = faker.name().lastName();
+    public static final String ChangedEmail = faker.internet().emailAddress();
 }

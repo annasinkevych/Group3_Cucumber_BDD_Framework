@@ -1,13 +1,16 @@
 package ext.group3.utilities.Utilities_UI;
 
+import ext.group3.pages.docuport.POM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import javax.print.Doc;
 import java.time.Duration;
+import java.util.List;
 
 public class DocuportUtils {
-
+    static POM access = new POM();
     /**
      * logins to the Docuport application
      * @param driver, which initialized in the test base
@@ -69,7 +72,67 @@ public class DocuportUtils {
         logOut.click();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
     }
+
+
+    /**
+     * click button from left side menu in Docuport from all permission
+     * @param desiredButton
+     * @author Alex S.
+     */
+    public static void clickLeftSideMenu(String desiredButton) {
+        for (int i = 0; i < access.getDocuAdvisorHomePage().leftSideMenu.size(); i++) {
+                if(access.getDocuAdvisorHomePage().leftSideMenu.get(i).getText().equalsIgnoreCase(desiredButton)){
+                    access.getDocuAdvisorHomePage().leftSideMenu.get(i).click();
+                }
+        }
+    }
+
+    /**
+     * click on client by its index
+     * @param index
+     * @author Alex S.
+     */
+    public static void clickOnClientByIndex(int index) {
+            Driver.getDriver().findElement(By.xpath("(//i[@class='v-icon notranslate mdi mdi-dots-horizontal theme--light'])[" + index + "]")).click();
+            BrowserUtils.waitForVisibility(access.getDocuAdvisorClientsPage().editClientButton,5).click();
+    }
+
+    /**
+     * find number of clients
+     * @author Alex S.
+     */
+    public static Integer findNumberOfClients() {
+            String nums = access.getDocuAdvisorClientsPage().amountOfRows.getText();
+            return Integer.parseInt(nums.substring(nums.lastIndexOf(" ")+1));
+    }
+
+    /**
+     * find client by name
+     * @param firstName
+     * @param lastName
+     * @author Alex S.
+     */
+    public static String searchingClientByName (String firstName, String lastName) {
+        String client = "";
+        int num = DocuportUtils.findNumberOfClients() / 10;
+        for (int j = 0; j <= num; j++) {
+            List<WebElement> allClientOnPage = Driver.getDriver().findElements(By.xpath("//span[@class='ml-2']"));
+            for (int i = 0; i <allClientOnPage.size(); i++) {
+                if(allClientOnPage.get(i).getText().equals(firstName +" "+ lastName)) {
+                    client = allClientOnPage.get(i).getText();
+                    break;
+                }
+            }
+            if(!client.isEmpty()) {
+                break;
+            }
+            access.getDocuAdvisorClientsPage().nextPageButton.click();
+            BrowserUtils.justWait(2000);
+        }
+        return client;
+    }
+
+
 
 }
