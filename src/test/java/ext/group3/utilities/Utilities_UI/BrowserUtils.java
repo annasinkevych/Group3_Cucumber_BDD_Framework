@@ -26,7 +26,7 @@ public class BrowserUtils {
     private static Logger LOG = LogManager.getLogger();
 
 
-    public static void takeScreenshot(){
+    public static void takeScreenshot() {
         try {
             myScenario.log("Current url is: " + Driver.getDriver().getCurrentUrl());
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -275,6 +275,39 @@ public class BrowserUtils {
                 LOG.info("Document is loading");
             return isPageLoaded;
         });
+    }
+
+    /**
+     *
+     * @param element
+     * @param keys
+     * @author Alex S.
+     */
+    public static void sendKeysJS(WebElement element, String keys) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].value = '" + keys + "';", element);
+    }
+
+    /**
+     *
+     * @param element
+     * @author Alex S.
+     */
+    public static void clickJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    /**
+     *
+     * @param element
+     * @param keys
+     * @author Alex S.
+     */
+    public static void sendKeysActions(WebElement element, String keys) {
+       Actions actions = new Actions(Driver.getDriver());
+       actions.doubleClick(element).doubleClick(element).perform();
+       element.sendKeys(keys);
     }
 
 }

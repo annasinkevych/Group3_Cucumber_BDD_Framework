@@ -50,7 +50,7 @@ public class DocuEditClientPage extends DocuLoginPage {
         dropDown.click();
         dropDown.sendKeys(value);
         List<WebElement> options = Driver.getDriver().findElements(By.xpath("//div[@class = 'v-list-item__title']/span[.='"+value+"']"));
-        options.getFirst().click();
+        options.get(0).click();
     }
 
 

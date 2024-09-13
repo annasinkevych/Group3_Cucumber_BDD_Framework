@@ -39,9 +39,8 @@ public class DocuClientPage extends DocuportBasePage {
     public void clickOnTabLeftNavMenu(String name){
         try{
             WebElement element = Driver.getDriver().findElement(By.xpath("//span[.='"+ name +"'] | //span[.='"+name+"']/span"));
-            BrowserUtils.waitForClickable(element, 3);
+            BrowserUtils.waitForClickable(element, 10);
             BrowserUtils.clickWithJS(element);
-            BrowserUtils.waitForVisibility(element, 3);
         }catch(NoSuchElementException e){
             LOG.error("Element not found: //h2[.='"+name +"']");
         }

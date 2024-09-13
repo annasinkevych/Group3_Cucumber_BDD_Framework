@@ -3,6 +3,7 @@ package ext.group3.step_definitions;
 import ext.group3.pages.docuport.DocuClientPage;
 import ext.group3.pages.docuport.DocuLoginPage;
 import ext.group3.pages.docuport.DocuportBasePage;
+import ext.group3.utilities.Utilities_API.Environment;
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.DocuportConstants;
@@ -28,7 +29,9 @@ public class DocuportLoginForALlUsersStepDefs {
 
     @When("user enters credentials as {string} {string}")
     public void user_enters_credentials_as(String username, String password) {
-        Driver.getDriver().get(ConfigurationReader.getProperties("docuport"));
+
+        //currently environment is set to beta in the configuration properties
+        Driver.getDriver().get(Environment.URL);
 
         assertTrue(loginPage.loginButton.isDisplayed());
         loginPage.usernameField.sendKeys(username);
@@ -41,11 +44,6 @@ public class DocuportLoginForALlUsersStepDefs {
     public void user_should_see_the_displayed(String string) {
         boolean actual;
         BrowserUtils.justWait(DocuportConstants.small);
-        if (username.equals("b1g3_client@gmail.com")){
-            // loginPage.usernameField.sendKeys(username);
-            BrowserUtils.justWait(DocuportConstants.small);
-            clientPage.chooseAccountText.click();
-        }
 
         try {
             actual = basePage.Batch1Group3Button.isDisplayed();
@@ -60,4 +58,20 @@ public class DocuportLoginForALlUsersStepDefs {
         LOG.info("Expected button: " + basePage.Batch1Group3Button.getText());
     }
 
+    @When("user clicks on the usericon button")
+    public void user_clicks_on_the_usericon_button() {
+        loginPage.userIcon.click();
+    }
+
+    @When("user clicks on the logout button")
+    public void user_clicks_on_the_logout_button() {
+        loginPage.logoutButton.click();
+    }
+
+    @Then("user should be successfully logged out and should see the login page displayed")
+    public void user_should_be_successfully_logged_out_and_should_see_the_login_page_displayed() {
+        loginPage.loginTextElement.isDisplayed();
+    }
+
 }
+
