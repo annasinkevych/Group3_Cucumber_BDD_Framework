@@ -1,6 +1,7 @@
 package ext.group3.step_definitions;
 
 import ext.group3.pages.docuport.POM;
+import ext.group3.pages.docuport.UsersPage;
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.DocuportConstants;
@@ -9,8 +10,10 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Docuport_Create_New_Client_Step_Defs {
@@ -84,4 +87,40 @@ public class Docuport_Create_New_Client_Step_Defs {
         //asserting all the previous ones
         softAssertions.assertAll();
     }
+
+    UsersPage usersPage = new UsersPage();
+    @Given("user click Users button")
+    public void user_click_users_button() throws InterruptedException {
+        Thread.sleep(5000);
+       usersPage.usersButton.click();
+    }
+    @Given("user click Search button")
+    public void user_click_search_button() {
+    usersPage.searchButton.click();
+    }
+    @Given("user write Firstname or Lastname or Email address or Phone number and click search button")
+    public void user_write_firstname_or_lastname_or_email_address_or_phone_number_and_click_search_button() throws InterruptedException {
+
+
+        usersPage.searchFirstNameBox.sendKeys("Danny");
+        usersPage.searchLastNameBox.sendKeys("DeVito");
+        usersPage.searchEmailAddressBox.sendKeys("danny@gmail.com");
+        usersPage.searchPhoneNumberBox.sendKeys("3453457898");
+        Thread.sleep(3000);
+        usersPage.searchButton2.click();
+    }
+    @Then("user validate the searching information")
+    public void user_validate_the_searching_information() {
+        String expFullname = "Danny DeVito";
+        String expUsername = "danny@gmail.com";
+        String expEmailAddress = "danny@gmail.com";
+        String expPhoneNum = "3453457898";
+        String expRole = "Client";
+        String expAdvisor = "Batch1 Group3";
+        Assertions.assertThat(usersPage.resultFullName.getText().equals(expFullname));
+
+
+
+    }
+
 }
