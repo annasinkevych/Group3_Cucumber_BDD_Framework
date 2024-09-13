@@ -42,13 +42,13 @@ public class DocuLoginPage {
         passwordField.sendKeys(password);
         loginButton.click();
 
-        try
-        {
-            if(BrowserUtils.waitForVisibility(submitButton, DocuportConstants.small).isDisplayed())
-                submitButton.click();
-        }catch(Exception e){
-            LOG.error("No submit button displayed");
-        }
+//        try
+//        {
+//            if(BrowserUtils.waitForVisibility(submitButton, DocuportConstants.small).isDisplayed())
+//                submitButton.click();
+//        }catch(Exception e){
+//            LOG.error("No submit button displayed");
+//        }
     }
 
 }

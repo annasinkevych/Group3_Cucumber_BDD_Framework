@@ -20,9 +20,7 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
       | Antonio    | Test      | segundo@gmail.com | 3453457898   | Password1       |
 
 
-
-
-
+  
   #DB SCENARIO - Assignee: Andrew - refer to the examples table above for the clients
 #  @docuportDatabaseClientVerification
   Scenario: Verify the client was created in the DOCUPORT database
@@ -32,9 +30,6 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
   #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
 #  @docuportClientSearchFunctionality
   Scenario: Verify Client Search functionality, login as an advisor
-
-
-
 
 
 
