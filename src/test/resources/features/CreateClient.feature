@@ -1,4 +1,3 @@
-@smoke
 Feature: Docuport New Client Creation Feature Login as an Advisor
 
   #UI SCENARIO - Assignee: Anna - I have started this a while ago but haven't finished it
