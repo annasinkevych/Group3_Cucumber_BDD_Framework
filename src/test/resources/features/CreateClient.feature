@@ -38,7 +38,11 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
   #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
 #  @docuportClientSearchFunctionality
   Scenario: Verify Client Search functionality, login as an advisor
-
+    Given the user is logged in as an advisor
+    And user click Users button
+    And user click Search button
+    And user write Firstname or Lastname or Email address or Phone number and click search button
+    Then user validate the searching information
 
 
 
