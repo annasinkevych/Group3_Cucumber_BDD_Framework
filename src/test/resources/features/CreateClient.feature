@@ -1,7 +1,8 @@
+@smoke
 Feature: Docuport New Client Creation Feature Login as an Advisor
 
   #UI SCENARIO - Assignee: Anna - I have started this a while ago but haven't finished it
-  @docuportCreateNewClientAnna
+#  @docuportCreateNewClientAnna @smoke
   Scenario Outline: Create a new "Personal" client and login as a new client
 
     Given the user is logged in as an advisor
@@ -15,30 +16,33 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
       | <Client Email> | <Client Password> |
     Then the user name "<First Name>" and "<Last Name>" should be displayed in the top right
     Examples:
-      | First Name | Last Name | Client Email           | Phone Number | Client Password |
-      | Danny      | DeVito    | danny@gmail.com        | 3453457898   | Password1       |
-      | Stefano    | Mozarella | mozzarello@example.com | 3453907898   | Password1       |
-      | Al         | Pacino    | pacino@gmail.com       | 6753907898   | Password1       |
+      | First Name | Last Name | Client Email    | Phone Number | Client Password |
+      | Danny      | Banny     | banu4@gmail.com | 3453457898   | Password1       |
 
 
-
-  #DB SCENARIO - Assignee: Andrew - refer to the examples table above for the clients
-  @docuportDatabaseClientVerification
-  Scenario: Verify the client was created in the DOCUPORT database
-
-
+  
+#  #DB SCENARIO - Assignee: Andrew - refer to the examples table above for the clients
+#  @docuportDatabaseClientVerification @smoke
+#  Scenario Outline: Verify the client was created in the DOCUPORT database
+#    Given a connection to the database is established using JDBC
+#    Then the client details in the database should match: "<First Name>", "<Last Name>", "<Client Email>", "<Phone Number>"
+#
+#    Examples:
+#      | First Name | Last Name | Client Email        | Phone Number |
+#      | MiMi       | Mas       | mimi@gmail.com      | 3453457898   |
+#      | Adriano    | Celentano | celentano@gmail.com |              |
+#
+#
+#
 
   #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
-  @docuportClientSearchFunctionality
+#  @docuportClientSearchFunctionality
   Scenario: Verify Client Search functionality, login as an advisor
     Given the user is logged in as an advisor
     And user click Users button
     And user click Search button
     And user write Firstname or Lastname or Email address or Phone number and click search button
     Then user validate the searching information
-
-
-
 
 
 

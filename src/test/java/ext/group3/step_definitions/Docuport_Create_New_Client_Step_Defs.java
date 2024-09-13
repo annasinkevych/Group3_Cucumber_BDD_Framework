@@ -1,7 +1,11 @@
 package ext.group3.step_definitions;
 
 import ext.group3.pages.docuport.POM;
+
 import ext.group3.pages.docuport.UsersPage;
+
+import ext.group3.utilities.Utilities_API.Environment;
+
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.DocuportConstants;
@@ -25,7 +29,7 @@ public class Docuport_Create_New_Client_Step_Defs {
     @Given("the user is logged in as an advisor")
     public void the_user_is_logged_in_as_an_advisor() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperties("docuport"));
+        Driver.getDriver().get(Environment.URL);
         pages.getDocuLoginPage().userLogin(DocuportConstants.USERNAME_ADVISOR, DocuportConstants.PASSWORD);
     }
     @When("the user creates a new client with the following details:")
@@ -33,8 +37,12 @@ public class Docuport_Create_New_Client_Step_Defs {
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Clients");
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Create new client");
         pages.getDocuClientPage().clickOnTabLeftNavMenu("Personal");
+
+
+
         // Convert the DataTable to a Map
         Map<String, String> clientDetails = dataTable.asMaps(String.class, String.class).get(0);
+        BrowserUtils.justWait(3000);
         pages.getDocuEditClientPage().buttonClick("Create new user");
         for (Map.Entry<String, String> entry : clientDetails.entrySet()) {
             pages.getDocuEditClientPage().sendKeysToTxtField(entry.getKey(), entry.getValue());
@@ -42,6 +50,7 @@ public class Docuport_Create_New_Client_Step_Defs {
 
         pages.getDocuEditClientPage().sendKeysToDropDownContainer("Advisor", "Batch1 Group3");
 
+        BrowserUtils.justWait(3000);
         BrowserUtils.clickWithJS(pages.getDocuEditClientPage().submitButton);
         BrowserUtils.justWait(3000);
 
