@@ -19,6 +19,35 @@ Feature: Upload document to Docuport application DB,API verification
 
 
 
-  #API &  DB SCENARIO - Assignee: Laura
-  @docuportAPIDBUploadDocument
-  Scenario: Create an API POST request to upload a document and cross check the database to verify it is in the database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
