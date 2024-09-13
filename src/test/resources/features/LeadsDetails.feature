@@ -1,4 +1,3 @@
-@smoke
 Feature: Verify the Leads Details on Leads Page is displayed correctly
 
   #UI SCENARIO - Assignee: Diliara
