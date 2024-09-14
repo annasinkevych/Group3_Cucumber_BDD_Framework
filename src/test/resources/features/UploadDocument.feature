@@ -12,7 +12,6 @@ Feature: Upload document to Docuport application DB,API verification
   Scenario: Login as and advisor to Docuport and upload a wrong document format, verify the document was not uploaded
 
 
-
   #API SCENARIO - Assignee: Daria
   @docuportAPIUploadDocumentVerification @ui
   Scenario: Create an API GET request to check if the uploaded Document is in the database
