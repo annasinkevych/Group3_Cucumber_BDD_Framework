@@ -28,20 +28,21 @@ public class DocuportDatabaseClientVerificationStepDefs {
         // Query to check if the client exists in the database
         // Using .format() to simplify code instead of concatenation
         String query = String.format(
-                "SELECT * FROM document.clients WHERE first_name = '%s' AND last_name = '%s' AND email_address = '%s'",
+                "SELECT * FROM identity.users WHERE first_name = '%s' AND last_name = '%s' AND email_address = '%s'",
                 firstName, lastName, email
         );
+//        System.out.println(query);
+
+        // Add phone number to the query if it's provided
+        if (!phoneNumber.isEmpty()) {
+            query += String.format(" AND phone_number = '%s'", phoneNumber);
+        }
         System.out.println(query);
 
-        // Add phone number to the query if it's provided
-        if (!phoneNumber.isEmpty()) {
-            query += String.format(" AND phone_number = '%s'", phoneNumber);
-        }
-
-        // Add phone number to the query if it's provided
-        if (!phoneNumber.isEmpty()) {
-            query += String.format(" AND phone_number = '%s'", phoneNumber);
-        }
+//        // Add phone number to the query if it's provided
+//        if (!phoneNumber.isEmpty()) {
+//            query += String.format(" AND phone_number = '%s'", phoneNumber);
+//        }
 
         // Execute the query and store the result
         resultSet = DB_Utility.runQuery(query);

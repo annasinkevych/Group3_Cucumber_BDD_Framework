@@ -2,6 +2,7 @@ package ext.group3.step_definitions;
 
 import ext.group3.pages.docuport.POM;
 import ext.group3.utilities.Utilities_API.Environment;
+import ext.group3.utilities.Utilities_DB.DB_Utility;
 import ext.group3.utilities.Utilities_UI.*;
 import ext.group3.utilities.Utilities_UI.Driver;
 import io.cucumber.java.en.Given;
@@ -14,6 +15,8 @@ import org.assertj.core.api.SoftAssertions;
 import java.sql.*;
 import java.util.List;
 import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class DocuportEditExistingUserStepDefs {
@@ -32,6 +35,9 @@ public class DocuportEditExistingUserStepDefs {
     String changedFirstName = DocuportConstants.ChangedFirstName;
     String changedLastName = DocuportConstants.ChangedLastName;
     String changedEmail = DocuportConstants.ChangedEmail;
+
+    POM pages = new POM();
+    public int allUserUIAmount;
 
     @Given("go to Docuport beta page")
     public void go_to_docuport_beta_page() {
@@ -57,7 +63,8 @@ public class DocuportEditExistingUserStepDefs {
     @Then(": User clicks on {string} button")
     public void user_clicks_on_button(String button) {
         LOG.info("Clicking Clients Button");
-        DocuportUtils.clickLeftSideMenu(button);
+        //DocuportUtils.clickLeftSideMenu(button);
+        access.getDocuportBasePage().leftNavReturnButton(button).click();
     }
 
     @Then(": User able to see {string} header")
@@ -120,6 +127,28 @@ public class DocuportEditExistingUserStepDefs {
     public void userValidatesAllAssertions() {
         softAssertions.assertAll();
     }
+
+    @When(": User get amount of all users on user page")
+    public void user_get_amount_of_all_users_on_user_page() {
+        pages.getUsersPage().searchButton.click();
+        pages.getUsersPage().radioButtonAll.click();
+        BrowserUtils.justWait(3000);
+        pages.getUsersPage().searchButton2.click();
+        BrowserUtils.justWait(2000);
+        allUserUIAmount = pages.getUsersPage().getAllUserAmount();
+
+    }
+
+    @When(": user validates that amount of user on UI same like in DB")
+    public void user_validates_that_amount_of_user_on_ui_same_like_in_db() {
+
+        DB_Utility.createConnection(Environment.DB_URL, Environment.DB_USERNAME, Environment.DB_PASSWORD );
+        DB_Utility.runQuery("SELECT * FROM identity.users");
+        int actualDBUserAmount = DB_Utility.getRowCount();
+        assertEquals(allUserUIAmount, actualDBUserAmount);
+    }
+
+
 
 }
 
