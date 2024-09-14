@@ -31,8 +31,6 @@ public class DB_Utility {
 
     }
 
-
-
     /**
      * Run the sql query provided and return ResultSet object
      *

@@ -8,6 +8,7 @@ public class POM {
     private DocuAdvisorHomePage docuAdvisorHomePage;
     private DocuportBasePage docuportBasePage;
     private DocuEditClientPage docuEditClientPage;
+    public UsersPage usersPage;
 
     public DocuClientPage getDocuClientPage() {
         if(docuClientPage == null) {
@@ -50,6 +51,14 @@ public class POM {
             docuEditClientPage = new DocuEditClientPage();
         }
         return docuEditClientPage;
+    }
+
+    public UsersPage getUsersPage() {
+        if(usersPage == null)
+        {
+            usersPage = new UsersPage();
+        }
+        return usersPage;
     }
 
 }

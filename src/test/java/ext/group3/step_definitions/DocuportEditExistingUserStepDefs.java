@@ -17,6 +17,7 @@ import java.util.Map;
 
 
 public class DocuportEditExistingUserStepDefs {
+  
     POM access = new POM();
     public static final Logger LOG = LogManager.getLogger();
     private SoftAssertions softAssertions = new SoftAssertions();
@@ -121,3 +122,4 @@ public class DocuportEditExistingUserStepDefs {
     }
 
 }
+
