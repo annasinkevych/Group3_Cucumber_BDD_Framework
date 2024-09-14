@@ -32,7 +32,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "html:target/cucumber/report.html",
                 "junit:target/junit/junit-report.xml",
-                "rerun:target/rerun.txt",},
+                "rerun:target/rerun.txt"},
         features = "src/test/resources/features", //goes to this folder where file is stored
         glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
         dryRun = false,  //gets code snippet for this scenario with the below tag when true
