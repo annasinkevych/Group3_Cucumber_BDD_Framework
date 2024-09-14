@@ -38,11 +38,11 @@ public class DB_Utility {
     public static void createConnection() {
 
         //Hr IP 3.89.9.22
-        String url = "jdbc:oracle:thin:@3.89.9.22:1521:XE";
+        String url = "jdbc:postgresql://35.222.62.70:5432/postgres";
         //Since we have added config properties into config reader
         //String url      = ConfigurationReader.getProperty("hr.db.url");
-        String username = "hr";
-        String password = "hr";
+        String username = "tstadmin";
+        String password = "pamBam-Gagmon-85tmrw";
 
 
         createConnection(url, username, password);

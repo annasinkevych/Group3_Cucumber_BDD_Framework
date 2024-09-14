@@ -61,6 +61,7 @@ public class DocuportEditExistingUserStepDefs {
  @Then(": User clicks on {string} button")
  public void user_clicks_on_button(String button) {
   LOG.info("Clicking Clients Button");
+  BrowserUtils.justWait(2000);
   DocuportUtils.clickLeftSideMenu(button);
  }
 
