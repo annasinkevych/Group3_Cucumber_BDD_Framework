@@ -17,7 +17,7 @@ public class DocuportRowsPerPageValidation {
     @When(": User get amount of all users on user page")
     public void user_get_amount_of_all_users_on_user_page() {
         pages.getUsersPage().searchButton.click();
-        pages.getUsersPage().getRadioButtonAll().click();
+        pages.getUsersPage().radioButtonAll.click();
         pages.getUsersPage().searchButton2.click();
         BrowserUtils.justWait(2000);
         allUserUIAmount = pages.getUsersPage().getAllUserAmount();
