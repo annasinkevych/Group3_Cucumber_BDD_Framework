@@ -388,6 +388,6 @@ public class DB_Utility {
     }
 
     public static Map<String, Object> getRowMapSpecRow(String query) {
-        return getQueryResultMap(query).getFirst();
+        return getQueryResultMap(query).get(0); //change to getFirst()if this doesn't work
     }
 }
