@@ -94,18 +94,17 @@ public class DocuportUtils {
      * @author Alex S.
      */
     public static void clickOnClientByIndex(int index) {
-            Driver.getDriver().findElement(By.xpath("(//i[@class='v-icon notranslate mdi mdi-dots-horizontal theme--light'])[" + index + "]")).click();
-            BrowserUtils.waitForVisibility(access.getDocuAdvisorClientsPage().editClientButton,5).click();
-    }
+        BrowserUtils.waitForVisibility(access.getDocuAdvisorClientsPage().threeDotsClients,  5);
+        Driver.getDriver().findElement(By.xpath("(//i[@class='v-icon notranslate mdi mdi-dots-horizontal theme--light'])[" + index + "]")).click();
+        BrowserUtils.waitForVisibility(access.getDocuAdvisorClientsPage().editClientButton,5).click();}
 
     /**
      * find number of clients
      * @author Alex S.
      */
     public static Integer findNumberOfClients() {
-            String nums = access.getDocuAdvisorClientsPage().amountOfRows.getText();
-            return Integer.parseInt(nums.substring(nums.lastIndexOf(" ")+1));
-    }
+        String nums = access.getDocuAdvisorClientsPage().amountOfRows.getText();
+        return Integer.parseInt(nums.substring(nums.lastIndexOf(" ")+1));}
 
     /**
      * find client by name
@@ -114,6 +113,7 @@ public class DocuportUtils {
      * @author Alex S.
      */
     public static String searchingClientByName (String firstName, String lastName) {
+        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class='v-data-footer__pagination']")),  5);
         String client = "";
         int num = DocuportUtils.findNumberOfClients() / 10;
         for (int j = 0; j <= num; j++) {
@@ -121,17 +121,12 @@ public class DocuportUtils {
             for (int i = 0; i <allClientOnPage.size(); i++) {
                 if(allClientOnPage.get(i).getText().equals(firstName +" "+ lastName)) {
                     client = allClientOnPage.get(i).getText();
-                    break;
-                }
-            }
+                    break;}}
             if(!client.isEmpty()) {
-                break;
-            }
+                break;}
             access.getDocuAdvisorClientsPage().nextPageButton.click();
-            BrowserUtils.justWait(2000);
-        }
-        return client;
-    }
+            BrowserUtils.justWait(2000);}
+        return client;}
 
 
 

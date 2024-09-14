@@ -1,7 +1,8 @@
+@smoke
 Feature: Docuport Login Logout and Negative Testing Feature
 
    #UI SCENARIO - Assignee: ELINA & Luidmyla - you can implement it this way or create your own way
-  @docuportLoginForALlUsers
+  @docuportLoginForALlUsers @ui
   Scenario Outline: Login Functionality for multiple users
     When user enters credentials as "<username>" "<password>"
     Then user should see the "Batch1 Group3" displayed
@@ -15,7 +16,7 @@ Feature: Docuport Login Logout and Negative Testing Feature
 
 
   #UI SCENARIO -  Assignee: Igor
-  @docuportLogoutFunctionality
+  @docuportLogoutFunctionality @ui
   Scenario: Verify that the users can logout successfully
     When user enters credentials as "b1g3_advisor@gmail.com" "Group3"
     Then user should see the "Batch1 Group3" displayed

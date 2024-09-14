@@ -31,25 +31,6 @@ public class DB_Utility {
 
     }
 
-
-    /**
-     * Create connection method , just checking one connection successful or not
-     */
-    public static void createConnection() {
-
-        //Hr IP 3.89.9.22
-        String url = "jdbc:postgresql://35.222.62.70:5432/postgres";
-        //Since we have added config properties into config reader
-        //String url      = ConfigurationReader.getProperty("hr.db.url");
-        String username = "tstadmin";
-        String password = "pamBam-Gagmon-85tmrw";
-
-
-        createConnection(url, username, password);
-
-    }
-
-
     /**
      * Run the sql query provided and return ResultSet object
      *
@@ -402,5 +383,9 @@ public class DB_Utility {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public static Map<String, Object> getRowMapSpecRow(String query) {
+        return getQueryResultMap(query).get(0); //change to getFirst()if this doesn't work
     }
 }

@@ -1,5 +1,7 @@
 package ext.group3.step_definitions;
 
+import ext.group3.utilities.Utilities_API.Environment;
+import ext.group3.utilities.Utilities_DB.DB_Utility;
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.Driver;
 import io.cucumber.java.After;
@@ -22,7 +24,7 @@ public class Hooks {
         LOG.info("...........START AUTOMATION...........LOOP ACADEMY");
     }
 
-//    @After
+    @After
     public void tearDown(Scenario scenario) {
         // only takes a screenshot when scenario is failed
         if (scenario.isFailed()) {
@@ -31,6 +33,18 @@ public class Hooks {
         }
         LOG.info("...........END AUTOMATION...........LOOP ACADEMY");
         Driver.closeDriver();
+    }
+
+    @Before("@db")
+    public void dbHook() {
+        System.out.println("creating database connection");
+        DB_Utility.createConnection(Environment.DB_URL, Environment.DB_USERNAME, Environment.DB_PASSWORD);
+    }
+
+    @After("@db")
+    public void afterDbHook() {
+        System.out.println("closing database connection");
+        DB_Utility.destroy();
     }
 
     //@AfterStep
