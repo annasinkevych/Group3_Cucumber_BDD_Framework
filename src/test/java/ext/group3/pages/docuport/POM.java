@@ -53,7 +53,7 @@ public class POM {
         return docuEditClientPage;
     }
 
-    public UsersPage usersPage() {
+    public UsersPage getUsersPage() {
         if(usersPage == null)
         {
             usersPage = new UsersPage();
