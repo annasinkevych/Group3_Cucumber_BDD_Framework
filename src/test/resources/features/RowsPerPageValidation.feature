@@ -1,10 +1,10 @@
 Feature: Verify the rows per page match the user count in database
 
   Background:
-    Given user is on Docuport login page
+    Given go to Docuport beta page
 
-
-@docuportRowsPerPageValidation
+#UI & DB SCENARIO - Assignee: Oleksandr M
+@docuportRowsPerPageValidation @smoke
 Scenario: Login as and advisor to Docuport and verify the rows per page match the user count in database
   When : User Logs in Docuport as an advisor
     | username               | password |
