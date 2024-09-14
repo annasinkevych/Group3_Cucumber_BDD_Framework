@@ -1,4 +1,4 @@
-package ext.group3.runner;
+package ext.group3;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
