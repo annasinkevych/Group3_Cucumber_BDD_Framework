@@ -36,5 +36,8 @@ public class DocuAdvisorClientsPage {
     @FindBy(xpath = "//i[@class='v-icon notranslate mdi mdi-chevron-right theme--light']/../..")
     public WebElement nextPageButton;
 
+    @FindBy(xpath = "(//i[@class='v-icon notranslate mdi mdi-dots-horizontal theme--light'])")
+    public WebElement threeDotsClients;
+
 
 }

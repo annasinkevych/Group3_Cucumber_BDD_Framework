@@ -32,23 +32,6 @@ public class DB_Utility {
     }
 
 
-    /**
-     * Create connection method , just checking one connection successful or not
-     */
-    public static void createConnection() {
-
-        //Hr IP 3.89.9.22
-        String url = "jdbc:oracle:thin:@3.89.9.22:1521:XE";
-        //Since we have added config properties into config reader
-        //String url      = ConfigurationReader.getProperty("hr.db.url");
-        String username = "hr";
-        String password = "hr";
-
-
-        createConnection(url, username, password);
-
-    }
-
 
     /**
      * Run the sql query provided and return ResultSet object
@@ -402,5 +385,9 @@ public class DB_Utility {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public static Map<String, Object> getRowMapSpecRow(String query) {
+        return getQueryResultMap(query).getFirst();
     }
 }
