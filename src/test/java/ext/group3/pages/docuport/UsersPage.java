@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import javax.xml.xpath.XPath;
 import java.security.cert.X509Certificate;
+import java.util.List;
 
 public class UsersPage extends DocuportBasePage{
 
@@ -57,5 +58,20 @@ public class UsersPage extends DocuportBasePage{
     @FindBy(xpath = "(//td[@class='text-start'])[7]")
     public WebElement resultAdvisor;
 
+    @FindBy(xpath = "//div[@class='v-data-footer__pagination']")
+    public WebElement paginationData;
+
+
+    public int getAllUserAmount(){
+        String test = paginationData.getText().trim();
+        int userAmount = Integer.parseInt(test.substring(test.indexOf("f")+2));
+        return userAmount;
+    }
+
+    @FindBy(xpath = "//div[@role='radiogroup']")
+    public List<WebElement> radioButtonsList;
+
+    @FindBy(xpath = "(//div[@role='radiogroup']/child::div)[3]")
+    public WebElement radioButtonAll;
 
 }
