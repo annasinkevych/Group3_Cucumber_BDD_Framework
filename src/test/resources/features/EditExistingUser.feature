@@ -1,3 +1,4 @@
+@smoke
 Feature: Edit existing user in Docuport login as advisor
   Background:
     Given go to Docuport beta page

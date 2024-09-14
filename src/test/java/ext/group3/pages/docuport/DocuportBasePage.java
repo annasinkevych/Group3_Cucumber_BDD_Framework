@@ -62,7 +62,6 @@ public class DocuportBasePage extends DocuLoginPage {
     @FindBy(xpath = "//span[contains(text(), 'Batch1 Group3')]")
     public WebElement Batch1Group3Button;
 
-
     public DocuportBasePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
