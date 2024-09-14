@@ -1,7 +1,8 @@
+@smoke
 Feature: Docuport New Client Creation Feature Login as an Advisor
 
   #UI SCENARIO - Assignee: Anna - I have started this a while ago but haven't finished it
-  @docuportCreateNewClientAnna
+  @docuportCreateNewClientAnna @ui
   Scenario Outline: Create a new "Personal" client and login as a new client
 
     Given the user is logged in as an advisor
@@ -16,7 +17,7 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
     Then the user name "<First Name>" and "<Last Name>" should be displayed in the top right
     Examples:
       | First Name | Last Name | Client Email    | Phone Number | Client Password |
-      | Sanny      | Banny     | banu7@gmail.com | 3453457898   | Password1       |
+      | Oppie      | Nana      | oppie@gmail.com | 3453457898   | Password1       |
 
 
   
@@ -35,7 +36,7 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
 
 
   #UI SCENARIO - Assignee: Ayaz -refer to the examples table above for the clients
-  @docuportClientSearchFunctionality
+  @docuportClientSearchFunctionality @ui
   Scenario: Verify Client Search functionality, login as an advisor
     Given the user is logged in as an advisor
     And user click Users button

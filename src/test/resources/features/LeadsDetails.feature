@@ -1,7 +1,8 @@
+@smoke
 Feature: Verify the Leads Details on Leads Page is displayed correctly
 
   #UI SCENARIO - Assignee: Diliara
-  @docuportLeadsVerify
+  @docuportLeadsVerify @ui
   Scenario: Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"
     Given user is on Docuport login page
     When user enters credentials

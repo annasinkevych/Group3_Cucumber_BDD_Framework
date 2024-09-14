@@ -1,4 +1,4 @@
-@regression
+@smoke
 Feature: Send invitation to Docuport application DB verification
 
 

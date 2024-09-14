@@ -2,8 +2,8 @@
 Feature: Edit existing user in Docuport login as advisor
   Background:
     Given go to Docuport beta page
-  #UI SCENARIO
-  @docuportEditExistingUser
+  #UI SCENARIO - Assignee: Alex S
+  @docuportEditExistingUser @ui
   Scenario: Login as and advisor to Docuport and edit existing client
     When : User Logs in Docuport as an advisor
       | username               | password |
@@ -22,7 +22,7 @@ Feature: Edit existing user in Docuport login as advisor
 
 
 
-  #UI & DB SCENARIO - Assignee: Alex S
+  #UI & DB SCENARIO - Assignee: Oleksandr M
   @docuportRowsPerPageValidation
   Scenario: Login as and advisor to Docuport and verify the rows per page match the user count in database
 

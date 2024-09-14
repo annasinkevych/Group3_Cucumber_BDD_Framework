@@ -19,15 +19,7 @@ public class DocuportDatabaseClientVerificationStepDefs {
 
     @Given("a connection to the database is established using JDBC")
     public void connectionToDb() {
-
-        // Connect to Docuport database
-        LOG.info("\n\n-----CONNECTING TO THE DATABASE-----\n\n");
-        try {
-            DB_Utility.createConnection(Environment.DB_URL, Environment.DB_USERNAME, Environment.DB_PASSWORD);
-            LOG.info("\n\n-----DATABASE CONNECTION ESTABLISHED-----\n\n");
-        } catch (Exception e) {
-            LOG.error("\n\n-----DATABASE CONNECTION FAILED-----\n{}\n\n", e.getMessage());
-        }
+        DB_Utility.createConnection(Environment.DB_URL, Environment.DB_USERNAME, Environment.DB_PASSWORD);
     }
 
     @Then("the client details in the database should match: {string}, {string}, {string}, {string}")
@@ -36,9 +28,10 @@ public class DocuportDatabaseClientVerificationStepDefs {
         // Query to check if the client exists in the database
         // Using .format() to simplify code instead of concatenation
         String query = String.format(
-                "SELECT * FROM identity.users WHERE first_name = '%s' AND last_name = '%s' AND email_address = '%s'",
+                "SELECT * FROM document.clients WHERE first_name = '%s' AND last_name = '%s' AND email_address = '%s'",
                 firstName, lastName, email
         );
+        System.out.println(query);
 
         // Add phone number to the query if it's provided
         if (!phoneNumber.isEmpty()) {
