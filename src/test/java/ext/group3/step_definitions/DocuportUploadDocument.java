@@ -19,8 +19,8 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class DocuportUploadDocument {
@@ -40,7 +40,7 @@ public class DocuportUploadDocument {
     @Given("user is on Docuport Login Page")
     public void user_is_on_docuport_login_page() {
         Driver.getDriver().get(Environment.URL);
-        Assert.assertTrue(loginPage.loginButton.isDisplayed());
+        assertTrue(loginPage.loginButton.isDisplayed());
         loginPage.userLogin(Environment.ADVISOR_EMAIL, Environment.ADVISOR_PASSWORD);
 
     }

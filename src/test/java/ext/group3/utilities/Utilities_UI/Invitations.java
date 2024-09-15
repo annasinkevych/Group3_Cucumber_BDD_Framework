@@ -3,7 +3,8 @@ package ext.group3.utilities.Utilities_UI;
 import ext.group3.pages.docuport.DocuInvitationPage;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import java.util.List;
 import java.util.Map;
@@ -12,8 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import static io.restassured.RestAssured.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 
 
