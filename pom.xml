@@ -17,7 +17,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>3.3.1</version>
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>2</threadCount>
@@ -143,12 +143,12 @@
 
         <!-- This is the programming model and extension model for writing tests and extensions in JUnit 5.
         The org.junit.jupiter group contains the core classes and annotations for writing tests.-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.9.0</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <version>5.11.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <!--Library that helps us to do the automation testing of the API and POJO and @Data Encapsulation and Json Schema Validator-->
         <dependency>
