@@ -29,7 +29,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class) //run the class as Cucumber BDD tests
 @CucumberOptions(
         plugin = {"pretty",
-                "json:target/cucumber.json",
                 "html:target/html-reports/cucumber-report.html",
                 "json:target/json-reports/json-report.json",
                 "rerun:target/rerun.txt",
