@@ -32,7 +32,7 @@ public class Environment {
     static { //runs once in beginning when we use the class- static block
         //class to read from .properties files
         Properties properties = null;
-        String environment = System.getProperty("env" ) != null ? System.getProperty("env" ) : ConfigurationReader.getProperties("env" );
+        String environment = System.getProperty("env" ) != null ? System.getProperty("env" ) : ConfigurationReader.getProperty("env" );
         //String environment = ConfigurationReader.get("environment");
 
         try {

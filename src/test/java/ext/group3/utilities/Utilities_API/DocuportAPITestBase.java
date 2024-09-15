@@ -19,7 +19,7 @@ public class DocuportAPITestBase {
     @BeforeAll
     public static void setUp () {
         //baseURI = "https://beta.docuport.app";
-        baseURI = ConfigurationReader.getProperties("docuport.base.url");
+        baseURI = ConfigurationReader.getProperty("docuport.base.url");
 
         reqSpec = given().accept(ContentType.JSON)
                 .and().header("Authorization", getAccessToken("employee"));
@@ -37,16 +37,16 @@ public class DocuportAPITestBase {
         //TODO: add all other cases for each user type
         switch (userType){
             case "employee":
-                userEmail = ConfigurationReader.getProperties("employee_username");  // b1g2_employee@gmail.com
-                userPassword = ConfigurationReader.getProperties("employee_password");
+                userEmail = ConfigurationReader.getProperty("employee_username");  // b1g2_employee@gmail.com
+                userPassword = ConfigurationReader.getProperty("employee_password");
                 break;
             case "supervisor":
-                userEmail = ConfigurationReader.getProperties("supervisor_username");
-                userPassword = ConfigurationReader.getProperties("supervisor_password");
+                userEmail = ConfigurationReader.getProperty("supervisor_username");
+                userPassword = ConfigurationReader.getProperty("supervisor_password");
                 break;
             case "advisor":
-                userEmail = ConfigurationReader.getProperties("advisor_username");
-                userPassword = ConfigurationReader.getProperties("advisor_password");
+                userEmail = ConfigurationReader.getProperty("advisor_username");
+                userPassword = ConfigurationReader.getProperty("advisor_password");
                 break;
             default:
                 throw new RuntimeException("Invalid user type: \'" + userType + "\' is not among the options or is not implemented in switch case");

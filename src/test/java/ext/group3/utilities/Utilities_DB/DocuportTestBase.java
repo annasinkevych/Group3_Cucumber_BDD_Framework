@@ -8,9 +8,9 @@ public class DocuportTestBase {
 
     @BeforeAll
     public static void beforeAll() {
-        String DBUrl = ConfigurationReader.getProperties("docu.db.url");
-        String DBUsername = ConfigurationReader.getProperties("docu.db.username");
-        String DBPassword = ConfigurationReader.getProperties("docu.db.password");
+        String DBUrl = ConfigurationReader.getProperty("docu.db.url");
+        String DBUsername = ConfigurationReader.getProperty("docu.db.username");
+        String DBPassword = ConfigurationReader.getProperty("docu.db.password");
         DB_Utility.createConnection(DBUrl, DBUsername, DBPassword);
     }
 

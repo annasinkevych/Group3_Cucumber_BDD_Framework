@@ -4,24 +4,25 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class ConfigurationReader {
+    private static Properties configFile;
 
-    //this class reads what is inside configuration properties
-    private static Properties properties;
+    static {
 
-    static{
         try {
             String path = "configuration.properties";
             FileInputStream input = new FileInputStream(path);
-            properties = new Properties();
-            properties.load(input);
+            configFile = new Properties();
+            configFile.load(input);
             input.close();
-        } catch (Exception e){
-            System.out.println("File not found in ConfigurationReader class");
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
-    public static String getProperties(String keyName){
-        return properties.getProperty(keyName);
+    public static String getProperty(String keyName) {
+        return configFile.getProperty(keyName);
     }
+
 }

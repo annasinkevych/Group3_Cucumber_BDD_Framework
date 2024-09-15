@@ -82,10 +82,10 @@ public class DocuportUploadDocument {
 
         //        docuportAdvisorPage.uploadDocuments.sendKeys(faker.funnyName().name());
 
-        docuportAdvisorPage.client.sendKeys(ConfigurationReader.getProperties("clientname"));
+        docuportAdvisorPage.client.sendKeys(ConfigurationReader.getProperty("clientname"));
 
         docuportAdvisorPage.choose.click();
-        docuportAdvisorPage.service.sendKeys(ConfigurationReader.getProperties("service"));
+        docuportAdvisorPage.service.sendKeys(ConfigurationReader.getProperty("service"));
 
 
         docuportAdvisorPage.service.click();

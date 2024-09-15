@@ -23,71 +23,6 @@ import java.net.URL;
 import java.time.Duration;
 
 public class Driver {
-
-/*
-    Creating the private constructor so this class's object is not reachable from outside
-     */
-
-//    private Driver(){}
-//
-//    /*
-//    making driver instance private
-//    static - run before everything else and use ins static method
-//     */
-//
-//    //private static WebDriver driver;
-//    // implement threadLocal to achieve multi thread locally
-//    private static InheritableThreadLocal <WebDriver> driverPool = new InheritableThreadLocal<>();
-//
-//    /*
-//    reusable method that will return the same driver instance everytime called
-//     */
-//
-//    /**
-//     * singleton patter
-//     * author anna
-//     * @return
-//     */
-//    public static WebDriver getDriver(){
-//        if(driverPool.get()==null){
-//            String browserType = ConfigurationReader.getProperties("browser");
-//            switch (browserType.toLowerCase()){
-//                case "chrome":
-//                    driverPool.set(new ChromeDriver());
-//                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
-//                    break;
-//                case "firefox":
-//                    driverPool.set(new FirefoxDriver());
-//                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
-//                    break;
-//                case "safari":
-//                    driverPool.set(new SafariDriver());
-//                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
-//                    break;
-//                case "headless": //it will still run but will not open Chrome
-//                    ChromeOptions options = new ChromeOptions();
-//                    options.addArguments("--headless");
-//                    driverPool.set(new ChromeDriver(options));
-//                    //driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
-//            }
-//            driverPool.get().manage().window().maximize();
-//            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
-//        }
-//        return driverPool.get();
-//    }
-//
-//    /**
-//     * closing driver
-//     * @author anna
-//     */
-//    public static void closeDriver(){
-//        if(driverPool.get() !=null){
-//            driverPool.get().quit();
-//            //driver = null;
-//            driverPool.remove();
-//        }
-//    }
-
     static String browser;
 
     private Driver() {
@@ -102,7 +37,7 @@ public class Driver {
     public static WebDriver getDriver() {
         if (driver == null) {
             if (System.getProperty("BROWSER") == null) {
-                browser = ConfigurationReader.getProperties("browser");
+                browser = ConfigurationReader.getProperty("browser");
             } else {
                 browser = System.getProperty("BROWSER");
             }
@@ -111,7 +46,7 @@ public class Driver {
                 case "remote-chrome":
                     try {
                         // assign your grid server address
-                        String gridAddress = "54.242.161.207";
+                        String gridAddress = "107.21.55.90";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
@@ -124,7 +59,7 @@ public class Driver {
                 case "remote-firefox":
                     try {
                         // assign your grid server address
-                        String gridAddress = "54.242.161.207";
+                        String gridAddress = "107.21.55.90";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("firefox");
@@ -204,7 +139,7 @@ public class Driver {
                 case "remote-chrome-linux":
                     try {
                         // assign your grid server address
-                        String gridAddress = "54.242.161.207";
+                        String gridAddress = "107.21.55.90";
                         URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         chromeOptions = new ChromeOptions();
@@ -247,8 +182,6 @@ public class Driver {
             }
         }
 
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return driver;
     }
 

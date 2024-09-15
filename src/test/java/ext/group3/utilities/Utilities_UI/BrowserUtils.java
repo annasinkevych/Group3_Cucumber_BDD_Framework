@@ -267,7 +267,7 @@ public class BrowserUtils {
     }
 
     public static void waitUntilPageLoad() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties(("timeouts")))));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperty(("timeouts")))));
         wait.until((d) -> {
             Boolean isPageLoaded = (Boolean) ((JavascriptExecutor) Driver.getDriver())
                     .executeScript("return document.readyState").equals("complete");
