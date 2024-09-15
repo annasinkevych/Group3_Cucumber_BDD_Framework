@@ -1,0 +1,2043 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 15, 2024 10:11:19 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@smoke</a><a class="dropdown-item" href="#">@docuportAPIDBSendInvitation</a><a class="dropdown-item" href="#">@regression</a><a class="dropdown-item" href="#">@docuporUploadDocument</a><a class="dropdown-item" href="#">@docuportPostNewClientToAPIVerifyDatabase</a><a class="dropdown-item" href="#">@docuportClientSearchFunctionality</a><a class="dropdown-item" href="#">@docuportLeadsVerify</a><a class="dropdown-item" href="#">@docuportLoginForALlUsers</a><a class="dropdown-item" href="#">@docuportCreateNewClientAnna</a><a class="dropdown-item" href="#">@db</a><a class="dropdown-item" href="#">@docuportAPIUploadDocumentVerification</a><a class="dropdown-item" href="#">@docuportRowsPerPageValidation</a><a class="dropdown-item" href="#">@docuportLogoutFunctionality</a><a class="dropdown-item" href="#">@docuportDatabaseClientVerification</a><a class="dropdown-item" href="#">@docuportEditExistingUser</a><a class="dropdown-item" href="#">@ui</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Docuport New Client Creation Feature Login as an Advisor</p>
+            <p class="text-sm">
+              <span>10:11:19 AM</span> / <span>00:01:32:804</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Docuport New Client Creation Feature Login as an Advisor</h5>
+<span class='badge badge-success'>09.15.2024 10:11:19 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:12:52 AM</span>
+<span class='badge badge-default'>00:01:32:804</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Create a new "Personal" client and login as a new client</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Create a new "Personal" client and login as a new client</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is logged in as an advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user creates a new client with the following details:</span>
+      <div><table class='markup-table table '><tr><td>First name</td><td>Last name</td><td>Email address</td><td>Phone number</td><td>Password</td><td>Confirm password</td></tr><tr><td>Oppie</td><td>Nana</td><td>ipppiaqa1eeex@gmail.com</td><td>3453457898</td><td>Password1</td><td>Password1</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user validates that new client was created "Oppie" and "Nana"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user logs out as an advisor</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be able to log in as a new client using:</span>
+      <div><table class='markup-table table '><tr><td>Email address</td><td>Password</td></tr><tr><td>ipppiaqa1eeex@gmail.com</td><td>Password1</td></tr></table>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user name "Oppie" and "Nana" should be displayed in the top right</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Verify the client was created in the DOCUPORT database</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Verify the client was created in the DOCUPORT database</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given a connection to the database is established using JDBC</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the client details in the database should match: "MiMi", "Mas", "mimi@gmail.com", "3453457898"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Verify the client was created in the DOCUPORT database</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given a connection to the database is established using JDBC</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the client details in the database should match: "Sanny", "Banny", "banu7@gmail.com", "3453457898"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="23"><span class="badge log pass-bg mr-2">Pass</span>Verify Client Search functionality, login as an advisor</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_Create_New_Client_Step_Defs.the_user_is_logged_in_as_an_advisor()">
+                <span>Given the user is logged in as an advisor</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_Create_New_Client_Step_Defs.user_click_users_button()">
+                <span>And user click Users button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_Create_New_Client_Step_Defs.user_click_search_button()">
+                <span>And user click Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_Create_New_Client_Step_Defs.user_write_firstname_or_lastname_or_email_address_or_phone_number_and_click_search_button()">
+                <span>And user write Firstname or Lastname or Email address or Phone number and click search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_Create_New_Client_Step_Defs.user_validate_the_searching_information()">
+                <span>Then user validate the searching information</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="31"><span class="badge log pass-bg mr-2">Pass</span>POST to Docuport Client API and verify the client was created in the database</div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Edit existing user in Docuport login as advisor</p>
+            <p class="text-sm">
+              <span>10:12:52 AM</span> / <span>00:01:12:305</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Edit existing user in Docuport login as advisor</h5>
+<span class='badge badge-success'>09.15.2024 10:12:52 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:14:04 AM</span>
+<span class='badge badge-default'>00:01:12:305</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>Login as and advisor to Docuport and edit existing client</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.go_to_docuport_beta_page()">
+                <span>Given go to Docuport beta page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_logs_in_docuport_as_an_advisor(java.util.List<java.util.Map<java.lang.String, java.lang.String>>)">
+                <span>When : User Logs in Docuport as an advisor</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>b1g3_advisor@gmail.com</td><td>Group3</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_able_to_see_homepage_from_advisor_permisson()">
+                <span>Then : User able to see homepage from Advisor permission</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_clicks_on_button(java.lang.String)">
+                <span>And : User clicks on "Clients" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_able_to_see_header(java.lang.String)">
+                <span>Then : User able to see "Clients" header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_clicks_on_three_dots_in_right_corner_of_the_first_row_with_client()">
+                <span>And : User clicks on three dots in right corner of the first row with client</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_changes_first_name_last_name_and_email_address()">
+                <span>And : user changes First name, Last name, and Email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_clicks_button()">
+                <span>And : User clicks Save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed()">
+                <span>Then : Validate that data was changed in UI by searching through the Clients by the changed name</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.validate_thet_data_was_changed_in_database_as_well()">
+                <span>Then : Validate that data was changed in database</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.userValidatesAllAssertions()">
+                <span>Then : user validates all assertions</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Login as and advisor to Docuport and verify the rows per page match the user count in database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.go_to_docuport_beta_page()">
+                <span>Given go to Docuport beta page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_logs_in_docuport_as_an_advisor(java.util.List<java.util.Map<java.lang.String, java.lang.String>>)">
+                <span>When : User Logs in Docuport as an advisor</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>b1g3_advisor@gmail.com</td><td>Group3</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_clicks_on_button(java.lang.String)">
+                <span>And : User clicks on "Users" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_get_amount_of_all_users_on_user_page()">
+                <span>And : User get amount of all users on user page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_validates_that_amount_of_user_on_ui_same_like_in_db()">
+                <span>And : user validates that amount of user on UI same like in DB</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="55"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify the Leads Details on Leads Page is displayed correctly</p>
+            <p class="text-sm">
+              <span>10:14:04 AM</span> / <span>00:00:32:981</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify the Leads Details on Leads Page is displayed correctly</h5>
+<span class='badge badge-success'>09.15.2024 10:14:04 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:14:37 AM</span>
+<span class='badge badge-default'>00:00:32:981</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=55</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="56"><span class="badge log pass-bg mr-2">Pass</span>Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_enters_credentials(java.util.Map<java.lang.String, java.lang.String>)">
+                <span>When user enters credentials</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>b1g3_advisor@gmail.com</td></tr><tr><td>password</td><td>Group3</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_navigate_to_page(java.lang.String)">
+                <span>When user navigate to "Leads" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_should_see_leads_page(java.lang.String)">
+                <span>Then user should see "Leads" page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_clicks_on_Leads_details_button()">
+                <span>When user clicks on Leads details button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.LeadsDetails.user_should_see_leads_page(java.lang.String)">
+                <span>Then user should see "Leads details" page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="65"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Docuport Login Logout and Negative Testing Feature</p>
+            <p class="text-sm">
+              <span>10:14:37 AM</span> / <span>00:01:33:862</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Docuport Login Logout and Negative Testing Feature</h5>
+<span class='badge badge-success'>09.15.2024 10:14:37 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:16:11 AM</span>
+<span class='badge badge-default'>00:01:33:862</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=65</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>Login Functionality for multiple users</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="67"><span class="badge log pass-bg mr-2">Pass</span>Login Functionality for multiple users</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When user enters credentials as "b1g3_client@gmail.com" "Group3"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see the "Batch1 Group3" displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>Login Functionality for multiple users</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When user enters credentials as "b1g3_advisor@gmail.com" "Group3"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see the "Batch1 Group3" displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="77"><span class="badge log pass-bg mr-2">Pass</span>Login Functionality for multiple users</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When user enters credentials as "b1g3_supervisor@gmail.com" "Group3"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see the "Batch1 Group3" displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Login Functionality for multiple users</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>When user enters credentials as "b1g3_employee@gmail.com" "Group3"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user should see the "Batch1 Group3" displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="87"><span class="badge log pass-bg mr-2">Pass</span>Verify that the users can logout successfully</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportLoginForALlUsersStepDefs.user_enters_credentials_as(java.lang.String,java.lang.String)">
+                <span>When user enters credentials as "b1g3_advisor@gmail.com" "Group3"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportLoginForALlUsersStepDefs.user_should_see_the_displayed(java.lang.String)">
+                <span>Then user should see the "Batch1 Group3" displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportLoginForALlUsersStepDefs.user_clicks_on_the_usericon_button()">
+                <span>When user clicks on the usericon button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportLoginForALlUsersStepDefs.user_clicks_on_the_logout_button()">
+                <span>And user clicks on the logout button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportLoginForALlUsersStepDefs.user_should_be_successfully_logged_out_and_should_see_the_login_page_displayed()">
+                <span>Then user should be successfully logged out and should see the login page displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="95"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify the rows per page match the user count in database</p>
+            <p class="text-sm">
+              <span>10:16:11 AM</span> / <span>00:00:29:099</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify the rows per page match the user count in database</h5>
+<span class='badge badge-success'>09.15.2024 10:16:11 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:16:40 AM</span>
+<span class='badge badge-default'>00:00:29:099</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=95</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="96"><span class="badge log pass-bg mr-2">Pass</span>Login as and advisor to Docuport and verify the rows per page match the user count in database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.go_to_docuport_beta_page()">
+                <span>Given go to Docuport beta page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_logs_in_docuport_as_an_advisor(java.util.List<java.util.Map<java.lang.String, java.lang.String>>)">
+                <span>When : User Logs in Docuport as an advisor</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>b1g3_advisor@gmail.com</td><td>Group3</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_clicks_on_button(java.lang.String)">
+                <span>And : User clicks on "Users" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_get_amount_of_all_users_on_user_page()">
+                <span>And : User get amount of all users on user page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportEditExistingUserStepDefs.user_validates_that_amount_of_user_on_ui_same_like_in_db()">
+                <span>And : user validates that amount of user on UI same like in DB</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="104"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Send invitation to Docuport application DB verification</p>
+            <p class="text-sm">
+              <span>10:16:40 AM</span> / <span>00:00:04:819</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Send invitation to Docuport application DB verification</h5>
+<span class='badge badge-success'>09.15.2024 10:16:40 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:16:45 AM</span>
+<span class='badge badge-default'>00:00:04:819</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=104</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>Post invitation and verify in database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_invitation_api_vs_db.user_sends_post_request_to_with_the_following_info(java.lang.String,java.lang.String)">
+                <span>When user sends POST request to "/api/v1/document/invitations/send" with the following info "laurissss@gmail.com"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_invitation_api_vs_db.status_code_is(java.lang.Integer)">
+                <span>Then status code is 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Docuport_invitation_api_vs_db.cdata_base_should_persist_same_client_info()">
+                <span>And cdataBase should persist same client info</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="113"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Upload document to Docuport application DB,API verification</p>
+            <p class="text-sm">
+              <span>10:16:45 AM</span> / <span>00:00:01:195</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Upload document to Docuport application DB,API verification</h5>
+<span class='badge badge-success'>09.15.2024 10:16:45 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:16:46 AM</span>
+<span class='badge badge-default'>00:00:01:195</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=113</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="114"><span class="badge log pass-bg mr-2">Pass</span>Create an API GET request to check if the uploaded Document is in the database</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.the_user_logged_in_to_docuport_api_as_advisor_role()">
+                <span>Given the user logged in to Docuport api as advisor role</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.i_send_a_get_request_to(java.lang.String)">
+                <span>When I send a GET request to "/api/v1/document/documents/my-upload"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.the_response_status_should_be(int)">
+                <span>Then the response status should be 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.the_response_should_be_in_format(java.lang.String)">
+                <span>And the response should be in "application/json; charset=utf-8" format</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.the_response_should_contain_file_name_is(java.lang.String)">
+                <span>And the response should contain file name is "note.txt"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.Get_Api_doc_test.client_name_is(java.lang.String)">
+                <span>And client name is "Wilmer Frami"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="123"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Upload document to Docuport application DB,API verification</p>
+            <p class="text-sm">
+              <span>10:16:46 AM</span> / <span>00:00:32:946</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Upload document to Docuport application DB,API verification</h5>
+<span class='badge badge-success'>09.15.2024 10:16:46 AM</span>
+<span class='badge badge-danger'>09.15.2024 10:17:19 AM</span>
+<span class='badge badge-default'>00:00:32:946</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=123</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="124"><span class="badge log pass-bg mr-2">Pass</span>Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportUploadDocument.user_is_on_docuport_login_page()">
+                <span>Given user is on Docuport Login Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportUploadDocument.user_clicks_on_and_update_a_file(java.lang.String)">
+                <span>Then user clicks on "My uploads" and update a file</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="ext.group3.step_definitions.DocuportUploadDocument.user_verify_file_was_uploaded()">
+                <span>And user verify file was uploaded</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">16</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>17</span>
+</span>
+<p class="name">@smoke</p>
+<p class="duration text-sm">17 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@smoke</h4>
+<span status="pass" class='badge log pass-bg'>17 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:11:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Create a new "Personal" client and login as a new client</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Create a new "Personal" client and login as a new client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Verify the client was created in the DOCUPORT database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify the client was created in the DOCUPORT database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>Verify the client was created in the DOCUPORT database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify the client was created in the DOCUPORT database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:20 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Verify Client Search functionality, login as an advisor</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify Client Search functionality, login as an advisor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>POST to Docuport Client API and verify the client was created in the database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.POST to Docuport Client API and verify the client was created in the database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='33'>Login as and advisor to Docuport and edit existing client</a>
+<div class="">
+<span class="badge badge-default">Edit existing user in Docuport login as advisor.Login as and advisor to Docuport and edit existing client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:13:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='47'>Login as and advisor to Docuport and verify the rows per page match the user count in database</a>
+<div class="">
+<span class="badge badge-default">Edit existing user in Docuport login as advisor.Login as and advisor to Docuport and verify the rows per page match the user count in database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='55' id='56'>Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</a>
+<div class="">
+<span class="badge badge-default">Verify the Leads Details on Leads Page is displayed correctly.Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='67'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='72'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='77'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:26 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='82'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:48 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='87'>Verify that the users can logout successfully</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Verify that the users can logout successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:11 AM</td>
+<td>
+<a href="#" class="linked" test-id='95' id='96'>Login as and advisor to Docuport and verify the rows per page match the user count in database</a>
+<div class="">
+<span class="badge badge-default">Verify the rows per page match the user count in database.Login as and advisor to Docuport and verify the rows per page match the user count in database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='104' id='105'>Post invitation and verify in database</a>
+<div class="">
+<span class="badge badge-default">Send invitation to Docuport application DB verification.Post invitation and verify in database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='113' id='114'>Create an API GET request to check if the uploaded Document is in the database</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Create an API GET request to check if the uploaded Document is in the database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:46 AM</td>
+<td>
+<a href="#" class="linked" test-id='123' id='124'>Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportAPIDBSendInvitation</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportAPIDBSendInvitation</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='104' id='105'>Post invitation and verify in database</a>
+<div class="">
+<span class="badge badge-default">Send invitation to Docuport application DB verification.Post invitation and verify in database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@regression</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@regression</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:46 AM</td>
+<td>
+<a href="#" class="linked" test-id='123' id='124'>Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuporUploadDocument</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuporUploadDocument</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:46 AM</td>
+<td>
+<a href="#" class="linked" test-id='123' id='124'>Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Login as and advisor to Docuport and upload a document, verify the document was successfully uploaded</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportPostNewClientToAPIVerifyDatabase</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportPostNewClientToAPIVerifyDatabase</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>POST to Docuport Client API and verify the client was created in the database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.POST to Docuport Client API and verify the client was created in the database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportClientSearchFunctionality</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportClientSearchFunctionality</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:20 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Verify Client Search functionality, login as an advisor</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify Client Search functionality, login as an advisor</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportLeadsVerify</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportLeadsVerify</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='55' id='56'>Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</a>
+<div class="">
+<span class="badge badge-default">Verify the Leads Details on Leads Page is displayed correctly.Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@docuportLoginForALlUsers</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportLoginForALlUsers</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='67'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='72'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='77'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:26 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='82'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportCreateNewClientAnna</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportCreateNewClientAnna</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:11:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Create a new "Personal" client and login as a new client</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Create a new "Personal" client and login as a new client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@db</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@db</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='104' id='105'>Post invitation and verify in database</a>
+<div class="">
+<span class="badge badge-default">Send invitation to Docuport application DB verification.Post invitation and verify in database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportAPIUploadDocumentVerification</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportAPIUploadDocumentVerification</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='113' id='114'>Create an API GET request to check if the uploaded Document is in the database</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Create an API GET request to check if the uploaded Document is in the database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@docuportRowsPerPageValidation</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportRowsPerPageValidation</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:13:35 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='47'>Login as and advisor to Docuport and verify the rows per page match the user count in database</a>
+<div class="">
+<span class="badge badge-default">Edit existing user in Docuport login as advisor.Login as and advisor to Docuport and verify the rows per page match the user count in database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:11 AM</td>
+<td>
+<a href="#" class="linked" test-id='95' id='96'>Login as and advisor to Docuport and verify the rows per page match the user count in database</a>
+<div class="">
+<span class="badge badge-default">Verify the rows per page match the user count in database.Login as and advisor to Docuport and verify the rows per page match the user count in database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportLogoutFunctionality</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportLogoutFunctionality</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:48 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='87'>Verify that the users can logout successfully</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Verify that the users can logout successfully</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@docuportDatabaseClientVerification</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportDatabaseClientVerification</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Verify the client was created in the DOCUPORT database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify the client was created in the DOCUPORT database</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='18'>Verify the client was created in the DOCUPORT database</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify the client was created in the DOCUPORT database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@docuportEditExistingUser</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@docuportEditExistingUser</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='33'>Login as and advisor to Docuport and edit existing client</a>
+<div class="">
+<span class="badge badge-default">Edit existing user in Docuport login as advisor.Login as and advisor to Docuport and edit existing client</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>10</span>
+</span>
+<p class="name">@ui</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ui</h4>
+<span status="pass" class='badge log pass-bg'>10 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:11:19 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Create a new "Personal" client and login as a new client</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Create a new "Personal" client and login as a new client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:20 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='23'>Verify Client Search functionality, login as an advisor</a>
+<div class="">
+<span class="badge badge-default">Docuport New Client Creation Feature Login as an Advisor.Verify Client Search functionality, login as an advisor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:12:52 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='33'>Login as and advisor to Docuport and edit existing client</a>
+<div class="">
+<span class="badge badge-default">Edit existing user in Docuport login as advisor.Login as and advisor to Docuport and edit existing client</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='55' id='56'>Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</a>
+<div class="">
+<span class="badge badge-default">Verify the Leads Details on Leads Page is displayed correctly.Login as and advisor to Docuport and navigate to Leads page and click on "Leads Details"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='67'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:14:40 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='72'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='77'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:26 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='82'>Login Functionality for multiple users</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Login Functionality for multiple users</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:15:48 AM</td>
+<td>
+<a href="#" class="linked" test-id='65' id='87'>Verify that the users can logout successfully</a>
+<div class="">
+<span class="badge badge-default">Docuport Login Logout and Negative Testing Feature.Verify that the users can logout successfully</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>10:16:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='113' id='114'>Create an API GET request to check if the uploaded Document is in the database</a>
+<div class="">
+<span class="badge badge-default">Upload document to Docuport application DB,API verification.Create an API GET request to check if the uploaded Document is in the database</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 15, 2024 10:11:19 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 15, 2024 10:17:19 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>8</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>8</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>17</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>67</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Docuport New Client Creation Feature Login as an Advisor":92.804,"Edit existing user in Docuport login as advisor":72.305,"Verify the Leads Details on Leads Page is displayed correctly":32.981,"Docuport Login Logout and Negative Testing Feature":93.862,"Verify the rows per page match the user count in database":29.099,"Send invitation to Docuport application DB verification":4.819,"Upload document to Docuport application DB,API verification":1.195,"Upload document to Docuport application DB,API verification":32.946
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@smoke</td>
+<td>17</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportAPIDBSendInvitation</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@regression</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuporUploadDocument</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportPostNewClientToAPIVerifyDatabase</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportClientSearchFunctionality</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportLeadsVerify</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportLoginForALlUsers</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportCreateNewClientAnna</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@db</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportAPIUploadDocumentVerification</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportRowsPerPageValidation</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportLogoutFunctionality</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportDatabaseClientVerification</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@docuportEditExistingUser</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ui</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 8,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 17,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 67,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
