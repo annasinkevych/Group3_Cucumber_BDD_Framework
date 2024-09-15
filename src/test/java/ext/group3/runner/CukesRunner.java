@@ -28,18 +28,18 @@ import org.junit.runner.RunWith;
 //
 @RunWith(Cucumber.class) //run the class as Cucumber BDD tests
 @CucumberOptions(
-        plugin = {
+        plugin = {"pretty",
                 "json:target/cucumber.json",
-                "html:target/cucumber/report.html",
-                "junit:target/junit/junit-report.xml",
-                "rerun:target/rerun.txt",},
-        features = "src/test/resources/features", //goes to this folder where file is stored
-        glue = "ext/group3/step_definitions", //helps connect my feature file and step defs java code
-        dryRun = false,  //gets code snippet for this scenario with the below tag when true
+                "html:target/html-reports/cucumber-report.html",
+                "json:target/json-reports/json-report.json",
+                "rerun:target/rerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+        features = "src/test/resources/features",
+        glue = "ext/group3/step_definitions",
+        dryRun = false,
         tags = "@smoke",
-//        monochrome = false,//reduces unnecessary locks
-        publish = true //creates online cucumber reports that can be opened in the browser
-
+        monochrome = false,
+        publish = false
 )
 
 public class CukesRunner {
