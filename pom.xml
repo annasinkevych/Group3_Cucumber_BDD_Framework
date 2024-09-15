@@ -155,9 +155,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <!--                    <parallel>methods</parallel>-->
-                    <!--                    <threadCount>2</threadCount>-->
+                                        <parallel>methods</parallel>
+                                        <threadCount>2</threadCount>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <useUnlimitedThreads>false</useUnlimitedThreads>
+                    <perCoreThreadCount>false</perCoreThreadCount>
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
