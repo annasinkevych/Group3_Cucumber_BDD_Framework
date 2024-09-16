@@ -21,7 +21,7 @@ public class DocuportAPITestBase {
     protected static RequestSpecification reqSpec;
     protected static ResponseSpecification resSpec;
 
-  @BeforeTest
+  @BeforeClass
     public static void setUp () {
         //baseURI = "https://beta.docuport.app";
         baseURI = ConfigurationReader.getProperty("docuport.base.url");
