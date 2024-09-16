@@ -141,14 +141,6 @@
             <version>5.2.5</version>
         </dependency>
 
-        <!-- This is the programming model and extension model for writing tests and extensions in JUnit 5.
-        The org.junit.jupiter group contains the core classes and annotations for writing tests.-->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.9.0</version>
-            <scope>test</scope>
-        </dependency>
 
         <!--Library that helps us to do the automation testing of the API and POJO and @Data Encapsulation and Json Schema Validator-->
         <dependency>
@@ -185,6 +177,14 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
 
     </dependencies>

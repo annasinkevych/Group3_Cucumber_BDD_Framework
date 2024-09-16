@@ -10,7 +10,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
@@ -59,7 +60,7 @@ public class Get_Api_doc_test extends DocuportAPITestBase {
     @Then("the response should contain file name is {string}")
     public void the_response_should_contain_file_name_is(String expectedFileName) {
 
-        Assertions.assertEquals (expectedFileName, response.path( "items[0].displayName"));
+        Assert.assertEquals (expectedFileName, response.path( "items[0].displayName"));
 
     }
 
@@ -67,7 +68,7 @@ public class Get_Api_doc_test extends DocuportAPITestBase {
     @Then("client name is {string}")
     public void client_name_is(String expectedClientName) {
 
-        Assertions.assertEquals (expectedClientName, response.path( "items[0].client"));
+        Assert.assertEquals (expectedClientName, response.path( "items[0].client"));
 
     }
 

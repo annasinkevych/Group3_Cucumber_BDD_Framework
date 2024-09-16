@@ -2,7 +2,8 @@ package ext.group3.utilities.Utilities_DB;
 
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
 import ext.group3.utilities.Utilities_UI.Driver;
-import org.junit.jupiter.api.BeforeAll;
+import io.cucumber.java.BeforeAll;
+
 
 public class DocuportTestBase {
 

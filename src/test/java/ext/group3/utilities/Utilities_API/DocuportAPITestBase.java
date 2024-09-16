@@ -1,22 +1,27 @@
 package ext.group3.utilities.Utilities_API;
 
 import ext.group3.utilities.Utilities_UI.ConfigurationReader;
+
+import io.cucumber.java.BeforeAll;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.http.HttpStatus;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
 
 import static io.restassured.RestAssured.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
+
 
 public class DocuportAPITestBase {
 
     protected static RequestSpecification reqSpec;
     protected static ResponseSpecification resSpec;
 
-    @BeforeAll
+  @BeforeTest
     public static void setUp () {
         //baseURI = "https://beta.docuport.app";
         baseURI = ConfigurationReader.getProperty("docuport.base.url");
