@@ -113,7 +113,7 @@ public class DocuportUtils {
      * @author Alex S.
      */
     public static String searchingClientByName (String firstName, String lastName) {
-        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class='v-data-footer__pagination']")),  10);
+        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class='v-data-footer__pagination']")),  20);
         String client = "";
         int num = DocuportUtils.findNumberOfClients() / 10;
         for (int j = 0; j <= num; j++) {
@@ -125,7 +125,7 @@ public class DocuportUtils {
             if(!client.isEmpty()) {
                 break;}
             access.getDocuAdvisorClientsPage().nextPageButton.click();
-            BrowserUtils.justWait(2000);}
+            BrowserUtils.justWait(3000);}
         return client;}
 
 
