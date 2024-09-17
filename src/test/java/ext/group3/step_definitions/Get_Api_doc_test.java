@@ -23,6 +23,7 @@ public class Get_Api_doc_test extends DocuportAPITestBase {
     String accessToken;
     Response response;
 
+
     @Given("the user logged in to Docuport api as advisor role")
     public void the_user_logged_in_to_docuport_api_as_advisor_role() {
         String username = Environment.ADVISOR_EMAIL;
@@ -37,42 +38,34 @@ public class Get_Api_doc_test extends DocuportAPITestBase {
             LOG.error("Error getting access token");
         }
     }
+
     @When("I send a GET request to {string}")
     public void i_send_a_get_request_to(String endpoint) {
         response = given().accept(ContentType.JSON)
                 .and().header("Authorization", accessToken)
                 .when().get(baseURL + endpoint);
-
     }
+
     @Then("the response status should be {int}")
     public void the_response_status_should_be(int expectedStatusCode) {
-
         assertEquals("Status code verification failed: ", expectedStatusCode, response.statusCode());
-
     }
+
     @Then("the response should be in {string} format")
     public void the_response_should_be_in_format(String expectedContentType) {
-
         assertEquals("Response Content Type failed: ", expectedContentType, response.contentType());
         response.then().contentType(ContentType.JSON);
-
     }
+
     @Then("the response should contain file name is {string}")
     public void the_response_should_contain_file_name_is(String expectedFileName) {
-
         Assert.assertEquals (expectedFileName, response.path( "items[0].displayName"));
-
     }
-
 
     @Then("client name is {string}")
     public void client_name_is(String expectedClientName) {
-
         Assert.assertEquals (expectedClientName, response.path( "items[0].client"));
-
     }
-
-
 
 
 }

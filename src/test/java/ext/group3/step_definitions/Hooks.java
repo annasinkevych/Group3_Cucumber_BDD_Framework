@@ -17,14 +17,14 @@ public class Hooks {
     private static final Logger LOG  = LogManager.getLogger();
 
 //the point of Hooks class is to getDriver and close Driver
-    @Before //this tag says when anything Cucumber related runs, it triggers Hook this will run
+    @Before("@ui") //this tag says when anything Cucumber related runs, it triggers Hook this will run
     public void setUp(Scenario scenario) {
         Driver.getDriver();
         BrowserUtils.myScenario = scenario;
         LOG.info("...........START AUTOMATION...........LOOP ACADEMY");
     }
 
-    @After
+    @After("@ui")
     public void tearDown(Scenario scenario) {
         // only takes a screenshot when scenario is failed
         if (scenario.isFailed()) {

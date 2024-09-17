@@ -2,7 +2,7 @@
 Feature: Upload document to Docuport application DB,API verification
 
   #API SCENARIO - Assignee: Daria
-  @docuportAPIUploadDocumentVerification @ui @smoke
+  @docuportAPIUploadDocumentVerification
   Scenario: Create an API GET request to check if the uploaded Document is in the database
     Given the user logged in to Docuport api as advisor role
     When I send a GET request to "/api/v1/document/documents/my-upload"
