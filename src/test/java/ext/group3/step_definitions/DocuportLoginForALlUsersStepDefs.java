@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 
 
@@ -46,7 +47,8 @@ public class DocuportLoginForALlUsersStepDefs {
     @When("user clicks on the usericon button")
     public void user_clicks_on_the_usericon_button() {
         try {
-            BrowserUtils.waitForVisibility(loginPage.userIcon, 5).click();
+            //this is needed for Jenkins only as the screen resolution is smaller, so it clicks on the other element first
+            BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class=\"v-overlay__scrim\"]")), 5).click();
             BrowserUtils.waitForVisibility(loginPage.userIcon, 5).click();
         }
         catch (ElementClickInterceptedException e) {
@@ -57,7 +59,7 @@ public class DocuportLoginForALlUsersStepDefs {
     @When("user clicks on the logout button")
     public void user_clicks_on_the_logout_button() {
 
-            BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
+            BrowserUtils.waitForVisibility(loginPage.logoutButton,10).click();
 
     }
 
