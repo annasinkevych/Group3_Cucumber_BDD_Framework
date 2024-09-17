@@ -103,7 +103,8 @@ public class DocuportUtils {
      * @author Alex S.
      */
     public static Integer findNumberOfClients() {
-        String nums = access.getDocuAdvisorClientsPage().amountOfRows.getText();
+        WebElement element = BrowserUtils.waitForVisibility(access.getDocuAdvisorClientsPage().amountOfRows,  20);
+        String nums = element.getText();
         return Integer.parseInt(nums.substring(nums.lastIndexOf(" ")+1));}
 
     /**
