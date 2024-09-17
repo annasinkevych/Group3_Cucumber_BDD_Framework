@@ -97,16 +97,16 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.clickJS(access.getDocuAdvisorClientsPage().saveButton);
     }
 
-//    @Then(": Validate that data was changed in UI by searching through the Clients by the changed name")
-//    public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
-//        BrowserUtils.justWait(3000);
-//        LOG.info("Validating in UI th Client that has been changed");
-//        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
-//        expectedTxt = changedFirstName + " " + changedLastName;
-//        softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-//        System.out.println(actualTxt);
-//
-//    }
+    @Then(": Validate that data was changed in UI by searching through the Clients by the changed name")
+    public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
+        BrowserUtils.justWait(3000);
+        LOG.info("Validating in UI th Client that has been changed");
+        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
+        expectedTxt = changedFirstName + " " + changedLastName;
+        softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+        System.out.println(actualTxt);
+
+    }
 
     @Then(": Validate that data was changed in database")
     public void validate_thet_data_was_changed_in_database_as_well() throws SQLException {
