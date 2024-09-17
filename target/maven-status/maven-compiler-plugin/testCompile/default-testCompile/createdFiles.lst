@@ -9,6 +9,7 @@ ext/group3/utilities/Utilities_API/Environment.class
 ext/group3/pages/docuport/DocuAdvisorClientsPage.class
 ext/group3/utilities/Utilities_UI/DocuportUtils.class
 ext/group3/utilities/Utilities_UI/ConfigurationReader.class
+ext/group3/step_definitions/Get_Api_doc_test.class
 ext/group3/pages/docuport/DocuInvitationPage.class
 ext/group3/utilities/Utilities_UI/Invitations.class
 ext/group3/utilities/Utilities_API/DocuportApiUtil.class
