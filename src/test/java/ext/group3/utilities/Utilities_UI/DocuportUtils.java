@@ -113,7 +113,7 @@ public class DocuportUtils {
      * @author Alex S.
      */
     public static String searchingClientByName (String firstName, String lastName) {
-        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class='v-data-footer__pagination']")),  5);
+        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class='v-data-footer__pagination']")),  10);
         String client = "";
         int num = DocuportUtils.findNumberOfClients() / 10;
         for (int j = 0; j <= num; j++) {

@@ -44,8 +44,7 @@ public class DocuportLoginForALlUsersStepDefs {
 
     @When("user clicks on the usericon button")
     public void user_clicks_on_the_usericon_button() {
-        BrowserUtils.waitForClickable(loginPage.userIcon, 5);
-        loginPage.userIcon.click();
+        BrowserUtils.waitForVisibility(loginPage.userIcon, 10).click();
     }
 
     @When("user clicks on the logout button")

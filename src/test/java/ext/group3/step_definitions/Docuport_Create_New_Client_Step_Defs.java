@@ -127,6 +127,7 @@ public class Docuport_Create_New_Client_Step_Defs {
         String expRole = "Client";
         String expAdvisor = "Batch1 Group3";
 
+        Thread.sleep(3000);
         Assertions.assertThat(usersPage.resultFullName.getText().equals(expFullname));
         Thread.sleep(3000);
 
