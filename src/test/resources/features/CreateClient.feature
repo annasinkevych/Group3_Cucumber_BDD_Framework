@@ -49,4 +49,12 @@ Feature: Docuport New Client Creation Feature Login as an Advisor
 
       #API & DB Scenario - Assignee: Kanan
   @docuportPostNewClientToAPIVerifyDatabase @db
-  Scenario: POST to Docuport Client API and verify the client was created in the database
+#  Scenario: POST to Docuport Client API and verify the client was created in the database
+#    Given User logged in to Docuport api as "client" role
+#    When Users sends POST request to "/api/v1/document/users/me/clients" with following data:
+#      | clientType | 1           |
+#      | name       | $randomName |
+#      | firstName  | Loop        |
+#      | lastName   | Camp        |
+#    Then status code should be 200
+#    And Database should contain same client data

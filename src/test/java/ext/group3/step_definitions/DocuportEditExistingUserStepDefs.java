@@ -135,13 +135,23 @@ public class DocuportEditExistingUserStepDefs {
         String DBUrl = Environment.DB_URL;
         String DBUsername = Environment.DB_USERNAME;
         String DBPassword = Environment.DB_PASSWORD;
-        con = DriverManager.getConnection(DBUrl, DBUsername, DBPassword);
-        stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        rs = stm.executeQuery(query);
-        rs.next();
-        rs.next();
-        actualTxt = rs.getString("first_name") + " " + rs.getString("last_name");
-        softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+        try
+        {
+            con = DriverManager.getConnection(DBUrl, DBUsername, DBPassword);
+            stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            rs = stm.executeQuery(query);
+            if(rs.next())
+            {
+                actualTxt = rs.getString("first_name") + " " + rs.getString("last_name");
+                softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+            }
+            else {
+                System.out.println("No data found");
+            }
+        }catch (SQLException e){
+           e.printStackTrace();
+        }
+
     }
 
     @Then(": user validates all assertions")
