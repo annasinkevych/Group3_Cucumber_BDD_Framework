@@ -125,7 +125,7 @@ public class DocuportUtils {
                     break;}}
             if(!client.isEmpty()) {
                 break;}
-            access.getDocuAdvisorClientsPage().nextPageButton.click();
+            BrowserUtils.clickWithJS(access.getDocuAdvisorClientsPage().nextPageButton);
             BrowserUtils.justWait(3000);}
         return client;}
 
