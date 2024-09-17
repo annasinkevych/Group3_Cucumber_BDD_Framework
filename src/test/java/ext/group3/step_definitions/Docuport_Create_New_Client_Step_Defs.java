@@ -119,14 +119,16 @@ public class Docuport_Create_New_Client_Step_Defs {
         usersPage.searchButton2.click();
     }
     @Then("user validate the searching information")
-    public void user_validate_the_searching_information() {
+    public void user_validate_the_searching_information() throws InterruptedException {
         String expFullname = "Danny DeVito";
         String expUsername = "danny@gmail.com";
         String expEmailAddress = "danny@gmail.com";
         String expPhoneNum = "3453457898";
         String expRole = "Client";
         String expAdvisor = "Batch1 Group3";
+
         Assertions.assertThat(usersPage.resultFullName.getText().equals(expFullname));
+        Thread.sleep(3000);
 
 
 
