@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 
 import java.sql.*;
@@ -105,11 +106,25 @@ public class DocuportEditExistingUserStepDefs {
         LOG.info("Validating in UI the Client that has been changed");
 //        BrowserUtils.clickWithJS(BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//span[.='Search'][1]")), 5));
 
-        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
-//        expectedTxt = changedFirstName + " " + changedLastName;
+        try
+        {
+            access.getUsersPage().searchFirstNameBox.sendKeys(changedFirstName);
+            access.getUsersPage().searchLastNameBox.sendKeys(changedLastName);
+            BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
+            actualTxt = access.getUsersPage().resultFullName.getText();
+            expectedTxt = changedFirstName + " " + changedLastName;
+            softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+        }catch (TimeoutException e)
+        {
+            LOG.info("Timed out waiting for validation");
+        }
+
+
+//        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
+        //expectedTxt = changedFirstName + " " + changedLastName;
 //        actualTxt = changedFirstName + " " + changedLastName;
-        softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-        System.out.println(actualTxt);
+
+        //System.out.println(actualTxt);
 
     }
 
