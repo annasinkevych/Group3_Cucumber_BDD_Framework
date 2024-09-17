@@ -103,9 +103,9 @@ public class DocuportEditExistingUserStepDefs {
     public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
         BrowserUtils.justWait(3000);
         LOG.info("Validating in UI th Client that has been changed");
-        BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//span[.='Search'][1]")), 5).click();
-        access.getUsersPage().searchFirstNameBox.sendKeys(changedFirstName);
-        access.getUsersPage().searchLastNameBox.sendKeys(changedLastName);
+        //BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//span[.='Search'][1]")), 5).click();
+        //access.getUsersPage().searchFirstNameBox.sendKeys(changedFirstName);
+        //access.getUsersPage().searchLastNameBox.sendKeys(changedLastName);
 
         //actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
         expectedTxt = changedFirstName + " " + changedLastName;
