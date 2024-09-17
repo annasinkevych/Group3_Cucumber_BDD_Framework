@@ -108,10 +108,10 @@ public class DocuportEditExistingUserStepDefs {
 
         try
         {
-            access.getUsersPage().searchFirstNameBox.sendKeys(changedFirstName);
-            access.getUsersPage().searchLastNameBox.sendKeys(changedLastName);
+            BrowserUtils.waitForVisibility(access.getUsersPage().searchFirstNameBox, 5).sendKeys(changedFirstName);
+            BrowserUtils.waitForVisibility(access.getUsersPage().searchLastNameBox, 5).sendKeys(changedLastName);
             BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
-            actualTxt = access.getUsersPage().resultFullName.getText();
+            actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
             expectedTxt = changedFirstName + " " + changedLastName;
             softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
         }catch (TimeoutException e)
