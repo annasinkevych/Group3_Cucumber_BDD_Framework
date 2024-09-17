@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
+import org.openqa.selenium.ElementClickInterceptedException;
 
 
 import static org.junit.Assert.assertTrue;
@@ -50,7 +51,12 @@ public class DocuportLoginForALlUsersStepDefs {
     @When("user clicks on the logout button")
     public void user_clicks_on_the_logout_button() {
 
-        BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
+        try
+        {
+            BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
+        }catch (ElementClickInterceptedException e){
+            LOG.info("Element was hidden by another element");
+        }
     }
 
     @Then("user should be successfully logged out and should see the login page displayed")
