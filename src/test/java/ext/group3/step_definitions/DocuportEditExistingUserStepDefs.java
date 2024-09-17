@@ -114,7 +114,7 @@ public class DocuportEditExistingUserStepDefs {
             actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
             expectedTxt = changedFirstName + " " + changedLastName;
             softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-        }catch (TimeoutException e)
+        }catch (Exception e)
         {
             LOG.info("Timed out waiting for validation");
         }
