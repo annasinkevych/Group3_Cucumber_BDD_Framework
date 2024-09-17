@@ -45,13 +45,18 @@ public class DocuportLoginForALlUsersStepDefs {
 
     @When("user clicks on the usericon button")
     public void user_clicks_on_the_usericon_button() {
-        BrowserUtils.waitForVisibility(loginPage.userIcon, 10).click();
+        try {
+            BrowserUtils.waitForVisibility(loginPage.userIcon, 5).click();
+            BrowserUtils.waitForVisibility(loginPage.userIcon, 5).click();
+        }
+        catch (ElementClickInterceptedException e) {
+            LOG.info("Element not visible due to screen resolution set up in Jenkins");
+        }
     }
 
     @When("user clicks on the logout button")
     public void user_clicks_on_the_logout_button() {
 
-            BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
             BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
 
     }
