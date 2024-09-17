@@ -49,7 +49,8 @@ public class DocuportLoginForALlUsersStepDefs {
 
     @When("user clicks on the logout button")
     public void user_clicks_on_the_logout_button() {
-        loginPage.logoutButton.click();
+
+        BrowserUtils.waitForVisibility(loginPage.logoutButton,4).click();
     }
 
     @Then("user should be successfully logged out and should see the login page displayed")

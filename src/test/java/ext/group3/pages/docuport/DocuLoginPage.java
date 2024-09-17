@@ -50,10 +50,10 @@ public class DocuLoginPage {
         }
     }
 
-    @FindBy(xpath = "//div[@class='v-avatar primary']")
+    @FindBy(xpath = "//span[@class='subtitle-2 text-none pl-2 pr-3 gray--text text--darken-3']")
     public WebElement userIcon;
 
-    @FindBy(xpath = "//span[contains(text(),'Log out')]")
+    @FindBy(xpath = "//span[.='Log out']")
     public WebElement logoutButton;
 
 
