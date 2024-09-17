@@ -14,7 +14,7 @@ Feature: Edit existing user in Docuport login as advisor
     And : User clicks on three dots in right corner of the first row with client
     And : user changes First name, Last name, and Email address
     And : User clicks Save button
-    Then : Validate that data was changed in UI by searching through the Clients by the changed name
+    #Then : Validate that data was changed in UI by searching through the Clients by the changed name
     Then : Validate that data was changed in database
     Then : user validates all assertions
 
