@@ -48,7 +48,7 @@ public class DocuportLoginForALlUsersStepDefs {
     public void user_clicks_on_the_usericon_button() {
         try {
             //this is needed for Jenkins only as the screen resolution is smaller, so it clicks on the other element first
-            BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class=\"v-overlay__scrim\"]")), 5).click();
+            //BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//div[@class=\"v-overlay__scrim\"]")), 5).click();
             BrowserUtils.waitForVisibility(loginPage.userIcon, 5).click();
         }
         catch (ElementClickInterceptedException e) {
