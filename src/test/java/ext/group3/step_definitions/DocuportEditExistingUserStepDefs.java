@@ -99,7 +99,7 @@ public class DocuportEditExistingUserStepDefs {
 //            BrowserUtils.justWait(1000);
 //            LOG.info("Email field: " + access.getDocuAdvisorClientsPage().emailEditField.getText());
 //            JavascriptExecutor jse = (JavascriptExecutor)Driver.getDriver();
-//            jse.executeScript("arguments[0].value = ;", access.getDocuAdvisorClientsPage().emailEditField);
+//            jse.executeScript("arguments[0].value = '';", access.getDocuAdvisorClientsPage().emailEditField);
 //            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
 //            i++;
 //        }
@@ -115,7 +115,7 @@ public class DocuportEditExistingUserStepDefs {
             BrowserUtils.justWait(1000);
             LOG.info("URL: " + Driver.getDriver().getCurrentUrl());
             LOG.info("Clicking Save button still on edit page");
-            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
+            //LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
             i++;
         }
 
