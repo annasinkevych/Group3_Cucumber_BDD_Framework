@@ -97,14 +97,19 @@ public class DocuportEditExistingUserStepDefs {
 
     @Then("User clicks Save button")
     public void user_clicks_button() {
-        BrowserUtils.justWait(3000);
+        int i = 0;
+        BrowserUtils.justWait(10000);
         LOG.info("Clicking Save button");
-        BrowserUtils.clickJS(access.getDocuAdvisorClientsPage().saveButton);
-        BrowserUtils.justWait(3000);
-        if (Driver.getDriver().getCurrentUrl().contains("personal")){
-            access.getDocuAdvisorClientsPage().saveButton.click();
+        access.getDocuAdvisorClientsPage().saveButton.click();
+        while(i <30 && Driver.getDriver().getCurrentUrl().contains("personal")){
+            BrowserUtils.justWait(1000);
+            LOG.info("URL: " + Driver.getDriver().getCurrentUrl());
+            BrowserUtils.clickWithJS(access.getDocuAdvisorClientsPage().saveButton);
             LOG.info("Clicking Save button still on edit page");
+            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
+            i++;
         }
+
     }
 
     @Then("Validate that data was changed in UI by searching through the Clients by the changed name")
