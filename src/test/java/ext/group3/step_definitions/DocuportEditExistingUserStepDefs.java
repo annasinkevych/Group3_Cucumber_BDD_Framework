@@ -100,6 +100,11 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.justWait(3000);
         LOG.info("Clicking Save button");
         BrowserUtils.clickJS(access.getDocuAdvisorClientsPage().saveButton);
+        BrowserUtils.justWait(3000);
+        if (Driver.getDriver().getCurrentUrl().contains("personal")){
+            access.getDocuAdvisorClientsPage().saveButton.click();
+            LOG.info("Clicking Save button still on edit page");
+        }
     }
 
     @Then("Validate that data was changed in UI by searching through the Clients by the changed name")
