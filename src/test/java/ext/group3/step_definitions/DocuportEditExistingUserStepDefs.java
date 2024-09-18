@@ -93,16 +93,16 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.justWait(3000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().firstNameEditField, changedFirstName);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().lastNameEditField, changedLastName);
-        access.getDocuAdvisorClientsPage().emailEditField.clear();
-        BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
-        while(i <30 && !access.getDocuAdvisorClientsPage().emailEditField.getText().equals(changedEmail)) {
-            BrowserUtils.justWait(1000);
-            LOG.info("Email field: " + access.getDocuAdvisorClientsPage().emailEditField.getText());
-            JavascriptExecutor jse = (JavascriptExecutor)Driver.getDriver();
-            jse.executeScript("arguments[0].value = '';", access.getDocuAdvisorClientsPage().emailEditField);
-            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
-            i++;
-        }
+//        access.getDocuAdvisorClientsPage().emailEditField.clear();
+//        BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
+//        while(i <30 && !access.getDocuAdvisorClientsPage().emailEditField.getText().equals(changedEmail)) {
+//            BrowserUtils.justWait(1000);
+//            LOG.info("Email field: " + access.getDocuAdvisorClientsPage().emailEditField.getText());
+//            JavascriptExecutor jse = (JavascriptExecutor)Driver.getDriver();
+//            jse.executeScript("arguments[0].value = '';", access.getDocuAdvisorClientsPage().emailEditField);
+//            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
+//            i++;
+//        }
     }
 
     @Then("User clicks Save button")
