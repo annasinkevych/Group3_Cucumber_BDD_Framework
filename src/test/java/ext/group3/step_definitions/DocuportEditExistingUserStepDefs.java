@@ -106,7 +106,7 @@ public class DocuportEditExistingUserStepDefs {
     public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
         LOG.info("Validating in UI the Client that has been changed");
         BrowserUtils.justWait(5000);
-        LOG.info("CLicked on client search button");
+        LOG.info("CLicked on client search button" + Driver.getDriver().getCurrentUrl());
         access.getDocuClientPage().clientsSearchButton.click();
         BrowserUtils.waitForVisibility(access.getDocuClientPage().searchNameInputField, 5).sendKeys(changedFirstName + " " + changedLastName);
         BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
