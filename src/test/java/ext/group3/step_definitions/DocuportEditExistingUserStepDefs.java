@@ -144,8 +144,9 @@ public class DocuportEditExistingUserStepDefs {
             else {
                 System.out.println("No data found");
             }
-        }catch (SQLException e){
             softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+        }catch (SQLException e){
+            LOG.info("Exception caught - soft assertion failed");
            e.printStackTrace();
         }
 
