@@ -11,10 +11,7 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.sql.*;
 import java.util.List;
@@ -91,8 +88,25 @@ public class DocuportEditExistingUserStepDefs {
         int i = 0;
         LOG.info("Changing client first name, last name, and Email address");
         BrowserUtils.justWait(3000);
+
+
+        access.getDocuAdvisorClientsPage().firstNameEditField.click();
+        BrowserUtils.justWait(1000);
+        access.getDocuAdvisorClientsPage().firstNameEditField.clear();
+        access.getDocuAdvisorClientsPage().firstNameEditField.click();
+        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.CONTROL+"A");
+        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.DELETE);
+        BrowserUtils.justWait(1000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().firstNameEditField, changedFirstName);
+        access.getDocuAdvisorClientsPage().lastNameEditField.click();
+        BrowserUtils.justWait(1000);
+        access.getDocuAdvisorClientsPage().lastNameEditField.clear();
+        access.getDocuAdvisorClientsPage().firstNameEditField.click();
+        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.CONTROL+"A");
+        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.DELETE);
+        BrowserUtils.justWait(1000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().lastNameEditField, changedLastName);
+
 //        access.getDocuAdvisorClientsPage().emailEditField.clear();
 //        BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
 //        while(i <30 && !access.getDocuAdvisorClientsPage().emailEditField.getText().equals(changedEmail)) {
