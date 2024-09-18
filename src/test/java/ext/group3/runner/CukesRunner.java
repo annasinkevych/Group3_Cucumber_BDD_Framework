@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "ext/group3/step_definitions",
         dryRun = false,
-        tags = "@smoke",
+        tags = "@docuportEditExistingUser",
         monochrome = false,
         publish = false
 )

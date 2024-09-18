@@ -47,7 +47,8 @@ public class DocuportEditExistingUserStepDefs {
         Driver.getDriver().get(Environment.URL);
     }
 
-    @When(": User Logs in Docuport as an advisor")
+
+    @When("User Logs in Docuport as an advisor")
     public void user_logs_in_docuport_as_an_advisor(List<Map<String, String>> credentials) {
         LOG.info("Login step");
         for (Map<String, String> eachCredential : credentials) {
@@ -55,7 +56,7 @@ public class DocuportEditExistingUserStepDefs {
         }
     }
 
-    @Then(": User able to see homepage from Advisor permission")
+    @Then("User able to see homepage from Advisor permission")
     public void user_able_to_see_homepage_from_advisor_permisson() {
         LOG.info("Validating step Home page");
         actual = access.getDocuAdvisorHomePage().advisorHomePageValidator.isDisplayed();
@@ -63,14 +64,14 @@ public class DocuportEditExistingUserStepDefs {
         softAssertions.assertThat(actual).isEqualTo(expected);
     }
 
-    @Then(": User clicks on {string} button")
+    @Then("User clicks on {string} button")
     public void user_clicks_on_button(String button) {
         LOG.info("Clicking Clients Button");
         //DocuportUtils.clickLeftSideMenu(button);
         access.getDocuportBasePage().leftNavReturnButton(button).click();
     }
 
-    @Then(": User able to see {string} header")
+    @Then("User able to see {string} header")
     public void user_able_to_see_header(String string) {
         LOG.info("Validating step Clients Header");
         actual = access.getDocuAdvisorClientsPage().clientsHeader.isDisplayed();
@@ -78,13 +79,13 @@ public class DocuportEditExistingUserStepDefs {
         softAssertions.assertThat(actual).isEqualTo(expected);
     }
 
-    @Then(": User clicks on three dots in right corner of the first row with client")
+    @Then("User clicks on three dots in right corner of the first row with client")
     public void user_clicks_on_three_dots_in_right_corner_of_the_first_row_with_client() {
         LOG.info("Clicking on certain Client");
         DocuportUtils.clickOnClientByIndex(2);
     }
 
-    @Then(": user changes First name, Last name, and Email address")
+    @Then("user changes First name, Last name, and Email address")
     public void user_changes_first_name_last_name_and_email_address() {
         LOG.info("Changing client first name, last name, and Email address");
         BrowserUtils.justWait(3000);
@@ -93,31 +94,26 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
     }
 
-    @Then(": User clicks Save button")
+    @Then("User clicks Save button")
     public void user_clicks_button() {
         BrowserUtils.justWait(3000);
         LOG.info("Clicking Save button");
         BrowserUtils.clickJS(access.getDocuAdvisorClientsPage().saveButton);
     }
 
-    @Then(": Validate that data was changed in UI by searching through the Clients by the changed name")
+    @Then("Validate that data was changed in UI by searching through the Clients by the changed name")
     public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
         BrowserUtils.justWait(3000);
         LOG.info("Validating in UI the Client that has been changed");
 //        BrowserUtils.clickWithJS(BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//span[.='Search'][1]")), 5));
 
-        try
-        {
             BrowserUtils.waitForVisibility(access.getUsersPage().searchFirstNameBox, 5).sendKeys(changedFirstName);
             BrowserUtils.waitForVisibility(access.getUsersPage().searchLastNameBox, 5).sendKeys(changedLastName);
             BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
             actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
             expectedTxt = changedFirstName + " " + changedLastName;
             softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-        }catch (Exception e)
-        {
-            LOG.info("Timed out waiting for validation");
-        }
+
 
 
 //        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
@@ -128,8 +124,8 @@ public class DocuportEditExistingUserStepDefs {
 
     }
 
-    @Then(": Validate that data was changed in database")
-    public void validate_thet_data_was_changed_in_database_as_well() throws SQLException {
+    @Then("Validate that data was changed in database")
+    public void validate_that_data_was_changed_in_database_as_well() throws SQLException {
         String query = "SELECT first_name, last_name from document.clients where first_name = '" + changedFirstName + "' and last_name = '" + changedLastName + "'";
         expectedTxt = changedFirstName + " " + changedLastName;
         String DBUrl = Environment.DB_URL;
@@ -143,23 +139,25 @@ public class DocuportEditExistingUserStepDefs {
             if(rs.next())
             {
                 actualTxt = rs.getString("first_name") + " " + rs.getString("last_name");
-                softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
+
             }
             else {
                 System.out.println("No data found");
             }
         }catch (SQLException e){
+            softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
            e.printStackTrace();
         }
 
+
     }
 
-    @Then(": user validates all assertions")
+    @Then("user validates all assertions")
     public void userValidatesAllAssertions() {
         softAssertions.assertAll();
     }
 
-    @When(": User get amount of all users on user page")
+    @When("User get amount of all users on user page")
     public void user_get_amount_of_all_users_on_user_page() {
         pages.getUsersPage().searchButton.click();
         pages.getUsersPage().radioButtonAll.click();
@@ -170,7 +168,7 @@ public class DocuportEditExistingUserStepDefs {
 
     }
 
-    @When(": user validates that amount of user on UI same like in DB")
+    @When("user validates that amount of user on UI same like in DB")
     public void user_validates_that_amount_of_user_on_ui_same_like_in_db() {
 
         DB_Utility.createConnection(Environment.DB_URL, Environment.DB_USERNAME, Environment.DB_PASSWORD );

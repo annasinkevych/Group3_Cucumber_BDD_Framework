@@ -128,7 +128,7 @@ public class Driver {
                     chromeOptions.addArguments("--headless");
                     chromeOptions.addArguments("--no-sandbox");
                     chromeOptions.addArguments("--disable-dev-shm-usage");
-                    chromeOptions.addArguments("window-size=1920,1080");
+//                    chromeOptions.addArguments("window-size=1920,1080");
                     driver = new ChromeDriver(chromeOptions);
                     break;
 
@@ -176,9 +176,10 @@ public class Driver {
                     }
                     break;
             }
-            Driver.getDriver().manage().window().maximize();
-            Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+             driver.manage().window().maximize();
+//            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
+
 
         return driver;
     }
