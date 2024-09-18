@@ -90,26 +90,29 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.justWait(3000);
 
 
-        access.getDocuAdvisorClientsPage().firstNameEditField.click();
-        BrowserUtils.justWait(1000);
-        access.getDocuAdvisorClientsPage().firstNameEditField.clear();
 //        access.getDocuAdvisorClientsPage().firstNameEditField.click();
-//        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.CONTROL+"A");
-//        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.DELETE);
+        BrowserUtils.justWait(1000);
+//        access.getDocuAdvisorClientsPage().firstNameEditField.clear();
+        access.getDocuAdvisorClientsPage().firstNameEditField.click();
+        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.CONTROL+"A");
+        access.getDocuAdvisorClientsPage().firstNameEditField.sendKeys(Keys.DELETE);
         BrowserUtils.justWait(1000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().firstNameEditField, changedFirstName);
-        access.getDocuAdvisorClientsPage().lastNameEditField.click();
+//        access.getDocuAdvisorClientsPage().lastNameEditField.click();
         BrowserUtils.justWait(1000);
-        access.getDocuAdvisorClientsPage().lastNameEditField.clear();
-//        access.getDocuAdvisorClientsPage().firstNameEditField.click();
-//        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.CONTROL+"A");
-//        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.DELETE);
+//        access.getDocuAdvisorClientsPage().lastNameEditField.clear();
+        access.getDocuAdvisorClientsPage().lastNameEditField.click();
+        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.CONTROL+"A");
+        access.getDocuAdvisorClientsPage().lastNameEditField.sendKeys(Keys.DELETE);
         BrowserUtils.justWait(1000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().lastNameEditField, changedLastName);
 
-        access.getDocuAdvisorClientsPage().emailEditField.click();
+//        access.getDocuAdvisorClientsPage().emailEditField.click();
         BrowserUtils.justWait(1000);
-        access.getDocuAdvisorClientsPage().emailEditField.clear();
+//        access.getDocuAdvisorClientsPage().emailEditField.clear();
+        access.getDocuAdvisorClientsPage().emailEditField.click();
+        access.getDocuAdvisorClientsPage().emailEditField.sendKeys(Keys.CONTROL+"A");
+        access.getDocuAdvisorClientsPage().emailEditField.sendKeys(Keys.DELETE);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
 //        while(i <30 && !access.getDocuAdvisorClientsPage().emailEditField.getText().equals(changedEmail)) {
 //            BrowserUtils.justWait(1000);
