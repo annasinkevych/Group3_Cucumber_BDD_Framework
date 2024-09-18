@@ -88,12 +88,21 @@ public class DocuportEditExistingUserStepDefs {
 
     @Then("user changes First name, Last name, and Email address")
     public void user_changes_first_name_last_name_and_email_address() {
+        int i = 0;
         LOG.info("Changing client first name, last name, and Email address");
         BrowserUtils.justWait(3000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().firstNameEditField, changedFirstName);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().lastNameEditField, changedLastName);
-        access.getDocuAdvisorClientsPage().emailEditField.clear();
-        BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
+        //access.getDocuAdvisorClientsPage().emailEditField.clear();
+//        BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
+//        while(i <30 && !access.getDocuAdvisorClientsPage().emailEditField.getText().equals(changedEmail)) {
+//            BrowserUtils.justWait(1000);
+//            LOG.info("Email field: " + access.getDocuAdvisorClientsPage().emailEditField.getText());
+//            JavascriptExecutor jse = (JavascriptExecutor)Driver.getDriver();
+//            jse.executeScript("arguments[0].value = ;", access.getDocuAdvisorClientsPage().emailEditField);
+//            LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
+//            i++;
+//        }
     }
 
     @Then("User clicks Save button")
@@ -101,11 +110,10 @@ public class DocuportEditExistingUserStepDefs {
         int i = 0;
         BrowserUtils.justWait(10000);
         LOG.info("Clicking Save button");
-        access.getDocuAdvisorClientsPage().saveButton.click();
+        BrowserUtils.clickWithJS(access.getDocuAdvisorClientsPage().saveButton);
         while(i <30 && Driver.getDriver().getCurrentUrl().contains("personal")){
             BrowserUtils.justWait(1000);
             LOG.info("URL: " + Driver.getDriver().getCurrentUrl());
-            BrowserUtils.clickWithJS(access.getDocuAdvisorClientsPage().saveButton);
             LOG.info("Clicking Save button still on edit page");
             LOG.info("Button text: " + access.getDocuAdvisorClientsPage().saveButton.getText());
             i++;
