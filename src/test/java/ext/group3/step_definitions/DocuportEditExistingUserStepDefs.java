@@ -92,6 +92,7 @@ public class DocuportEditExistingUserStepDefs {
         BrowserUtils.justWait(3000);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().firstNameEditField, changedFirstName);
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().lastNameEditField, changedLastName);
+        access.getDocuAdvisorClientsPage().emailEditField.clear();
         BrowserUtils.sendKeysActions(access.getDocuAdvisorClientsPage().emailEditField, changedEmail);
     }
 
