@@ -12,6 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 
@@ -103,17 +104,19 @@ public class DocuportEditExistingUserStepDefs {
 
     @Then("Validate that data was changed in UI by searching through the Clients by the changed name")
     public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
-        BrowserUtils.justWait(3000);
         LOG.info("Validating in UI the Client that has been changed");
+        BrowserUtils.justWait(5000);
+        LOG.info("CLicked on client search button");
+        access.getDocuClientPage().clientsSearchButton.click();
+        BrowserUtils.waitForVisibility(access.getDocuClientPage().searchNameInputField, 5).sendKeys(changedFirstName + " " + changedLastName);
+        BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
 
-            BrowserUtils.clickWithJS(BrowserUtils.waitForVisibility(access.getUsersPage().searchButton, 10));
-            BrowserUtils.waitForVisibility(access.getDocuClientPage().searchNameInputField, 10).sendKeys(changedFirstName + " " + changedLastName);
-            BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
+        BrowserUtils.justWait(1000);
+        actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
 
-            actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
-            expectedTxt = changedFirstName + " " + changedLastName;
-            softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-
+        expectedTxt = changedFirstName + " " + changedLastName;
+        LOG.info(actualTxt + " - " + expectedTxt);
+        softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
     }
 
     @Then("Validate that data was changed in database")

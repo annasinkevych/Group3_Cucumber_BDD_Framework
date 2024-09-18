@@ -21,6 +21,9 @@ public class DocuClientPage extends DocuportBasePage {
     @FindBy(xpath = "//label[.='Name']//following-sibling::input")
     public WebElement searchNameInputField;
 
+    @FindBy(xpath = "(//span[.='Search'])[1]")
+    public WebElement clientsSearchButton;
+
 
     public WebElement getSuccessMessagePopUp(String fullname) {
         WebElement element;
