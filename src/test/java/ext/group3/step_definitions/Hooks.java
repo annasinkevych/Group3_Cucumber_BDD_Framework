@@ -5,6 +5,7 @@ import ext.group3.utilities.Utilities_DB.DB_Utility;
 import ext.group3.utilities.Utilities_UI.BrowserUtils;
 import ext.group3.utilities.Utilities_UI.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.apache.logging.log4j.LogManager;
@@ -47,7 +48,7 @@ public class Hooks {
         DB_Utility.destroy();
     }
 
-    //@AfterStep
+    @AfterStep
     public void screenShot(Scenario scenario){
         final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png", scenario.getName());
