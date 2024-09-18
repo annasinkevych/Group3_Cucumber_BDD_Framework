@@ -18,6 +18,10 @@ public class DocuClientPage extends DocuportBasePage {
     @FindBy(xpath = "//h3[.='Choose account']")
     public WebElement chooseAccountText;
 
+    @FindBy(xpath = "//label[.='Name']//following-sibling::input")
+    public WebElement searchNameInputField;
+
+
     public WebElement getSuccessMessagePopUp(String fullname) {
         WebElement element;
         try{

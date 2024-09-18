@@ -105,22 +105,14 @@ public class DocuportEditExistingUserStepDefs {
     public void validate_that_data_was_changed_in_ui_by_searching_through_the_clients_table_the_client_that_was_changed() {
         BrowserUtils.justWait(3000);
         LOG.info("Validating in UI the Client that has been changed");
-//        BrowserUtils.clickWithJS(BrowserUtils.waitForVisibility(Driver.getDriver().findElement(By.xpath("//span[.='Search'][1]")), 5));
 
-            BrowserUtils.waitForVisibility(access.getUsersPage().searchFirstNameBox, 5).sendKeys(changedFirstName);
-            BrowserUtils.waitForVisibility(access.getUsersPage().searchLastNameBox, 5).sendKeys(changedLastName);
+            BrowserUtils.clickWithJS(access.getUsersPage().searchButton);
+            BrowserUtils.waitForVisibility(access.getDocuClientPage().searchNameInputField, 10).sendKeys(changedFirstName + " " + changedLastName);
             BrowserUtils.clickWithJS(access.getUsersPage().searchButton2);
+
             actualTxt = BrowserUtils.waitForVisibility(access.getUsersPage().resultFullName, 5).getText();
             expectedTxt = changedFirstName + " " + changedLastName;
             softAssertions.assertThat(actualTxt).isEqualTo(expectedTxt);
-
-
-
-//        actualTxt = DocuportUtils.searchingClientByName(changedFirstName, changedLastName);
-        //expectedTxt = changedFirstName + " " + changedLastName;
-//        actualTxt = changedFirstName + " " + changedLastName;
-
-        //System.out.println(actualTxt);
 
     }
 
